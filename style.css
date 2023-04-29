@@ -2,6 +2,11 @@
 @import 'navbar.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
+::selection {
+    background-color: var(--text);
+    color: var(--navBg);
+}
+
 :root {
     --title: #D0D0D0;
     --subTitle: #BCA582;
