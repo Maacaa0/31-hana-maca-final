@@ -75,3 +75,75 @@ h1 {
     bottom: 0;
     left: calc(100% - 277px);
 }
+
+section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 5rem;
+}
+
+.about {
+    position: relative;
+    background-image: url(images/shape-about.png), url(images/bg-about.png);
+    background-position: calc(100% - 18rem) center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.about_container {
+    width: 60%;
+}
+
+h2 {
+    color: var(--text);
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 5rem;
+}
+
+.about_text {
+    font-size: 1.6rem;
+    color: var(--textBasic);
+    line-height: 2.3rem;
+}
+
+.about_socials {
+    position: relative;
+    left: calc(100% - 200px);
+    top: 13rem;
+}
+
+.br_hidden {
+    display: none;
+}
+
+/* -----media queries------ */
+
+@media (max-width: 1000px) {
+
+    header {
+        background-image: url(images/bg-main-secondary-mobile.svg), url(images/bg-main-mobile.png);
+        background-size: 130% auto, cover;
+    }
+
+    .header_main_navbar {
+        display: none;
+    }
+
+    .header_title {
+        top: 2.5rem;
+        left: 2rem;
+        width: 31rem;
+        margin-bottom: 33rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .br_hidden {
+        display: block;
+    }
+}

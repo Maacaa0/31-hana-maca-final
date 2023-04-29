@@ -7,14 +7,14 @@
     transition: 200ms ease;
 }
 
-#area1 {
+#area1_header {
     width: 64px;
     height: 65.36px;
     top: 52.64rem;
     left: calc(100% - 221.7px);
 }
 
-#area1:hover {
+#area1_header:hover {
     background-image: url(images/facebook_hover.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@
     scale: 1.3;
 }
 
-#area2 {
+#area2_header {
     width: 72px;
     height: 72px;
     top: 48.65rem;
@@ -31,11 +31,31 @@
 
 }
 
-#area2:hover {
+#area2_header:hover {
     background-image: url(images/instagram_hover.svg);
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
     transition: 200ms ease;
     scale: 1.2;
+}
+
+#area1_about {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    top: 5.15rem;
+    left: calc(100% - 147.3px);
+}
+
+#area1_about:hover {
+    
+}
+
+#area2_about {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    top: -2.66rem;
+    left: calc(100% - 50.7px);
 }
