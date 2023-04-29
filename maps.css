@@ -49,7 +49,12 @@
 }
 
 #area1_about:hover {
-    
+    background-image: url(images/wikipedia_hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 200ms ease;
+    scale: 1.3;
 }
 
 #area2_about {
@@ -58,4 +63,13 @@
     height: 65px;
     top: -2.66rem;
     left: calc(100% - 50.7px);
+}
+
+#area2_about:hover {
+    background-image: url(images/youtube_hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 200ms ease;
+    scale: 1.3;
 }
