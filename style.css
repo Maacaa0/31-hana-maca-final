@@ -1,1 +1,60 @@
+@import 'navbar.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --title: #D0D0D0;
+    --subTitle: #BCA582;
+    --text: #A3BA3D;
+    --textBasic: #FFFFFF;
+    --panel: hsla(193, 23%, 12%, 0.97);
+    --navBg: hsla(196, 82%, 6%, 0.627);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg-main.png), url(images/bg-main-secondary.svg);
+    background-size: cover, auto;
+    background-repeat: no-repeat;
+    background-position: auto, -2rem left;
+    position: relative;
+}
+
+.header_title {
+    position: relative;
+    top: 18rem;
+    left: 17rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 49rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--title);
+}
+
+.header_title_sub-title {
+    font-size: 1.5rem;
+    color: var(--subTitle)
+}
