@@ -129,18 +129,26 @@ h2 {
     }
 
     .header_main_navbar {
-        display: none;
+        display: flex;
+        position: fixed;
+        z-index: 99;
+        height: 100dvh;
+        top: 0;
+        right: -50vw;
+        width: 50vw;
+        transition: 0.3s cubic-bezier(.39,.58,.57,1);
     }
 
     .header_title {
         top: 2.5rem;
         left: 2rem;
-        width: 31rem;
+        width: 30rem;
         margin-bottom: 33rem;
     }
 
     h1 {
         font-size: 2.2rem;
+        font-weight: 300;
     }
 
     .br_hidden {
