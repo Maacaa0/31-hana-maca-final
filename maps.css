@@ -10,22 +10,32 @@
 #area1 {
     width: 64px;
     height: 65.36px;
-    top: 43.64rem;
-    left: 8.45rem;
+    top: 52.64rem;
+    left: calc(100% - 221.7px);
 }
 
 #area1:hover {
-    opacity: .3;
+    background-image: url(images/facebook_hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 200ms ease;
+    scale: 1.3;
 }
 
 #area2 {
     width: 72px;
     height: 72px;
-    top: 39.65rem;
-    left: 14.21rem;
+    top: 48.65rem;
+    left: calc(100% - 129.7px);
 
 }
 
 #area2:hover {
-    opacity: .3;
+    background-image: url(images/instagram_hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 200ms ease;
+    scale: 1.2;
 }

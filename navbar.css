@@ -1,4 +1,4 @@
-nav {
+.header_main_navbar {
     position: absolute;
     top: 3rem;
     right: 0;
@@ -24,11 +24,87 @@ nav {
     background: var(--text);
     position: relative;
     left: 50%;
-    top: .5rem;
+    top: .8rem;
     transform: translateX(-50%);
 }
 
 .main_navbar > li:hover::after {
     width: 100%;
     transition: ease 300ms;
+}
+
+/* Dynamic menu */
+
+.main_dynamic_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    font-size: 1.5rem;
+    background: hsla(197, 81%, 6%, 0.837);
+    color: var(--text);
+    list-style: none;
+    padding: 0.5rem 2rem calc(0.5rem - 3px) 2rem;
+    transition: opacity 250ms ease;
+}
+
+.dynamic_menu_links_container > li {
+    border-bottom: 3px solid transparent;
+}
+
+.dynamic_menu_container {
+    display: flex;
+    align-items: center;
+}
+
+.dynamic_menu_logo {
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+.dynamic_menu_logo_title {
+    font-size: 1.2rem;
+    color: var(--textBasic);
+}
+
+.dynamic_menu_links_container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.dynamic_menu_container {
+    cursor: pointer;
+}
+
+
+/* ------------------ */
+
+.back-to-top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--text) url(images/icon_right.png) center no-repeat;
+    transform: rotate(-90deg);
+    position: sticky;
+    left: calc(100% - 80px);
+    bottom: 2rem;
+    opacity: .6;
+    border-radius: 1rem;
+    border: none;
+    opacity: .8;
+    transition: opacity 250ms ease-in-out;
+}
+
+.back-to-top:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -10;
 }
