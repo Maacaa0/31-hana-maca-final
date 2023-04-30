@@ -88,11 +88,11 @@
 .bar1, .bar2, .bar3 {
     background-image: url(images/menu_bar.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    background-size: contain;
+    width: 85%;
     height: 7px;
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 6px;
 }
 
 @media (max-width: 1000px) {
@@ -105,8 +105,8 @@
         width: 64px;
         height: 48px;
         position: fixed;
-        left: calc(100% - 85px);
-        top: 3rem;
+        left: calc(100% - 93px);
+        top: 2.7rem;
         cursor: pointer;
     }
 
@@ -115,7 +115,7 @@
     }
 
     .active .bar1 {
-        transform: rotate(-45deg) translate(-14px, 5px);
+        transform: rotate(-45deg) translate(-10px, 7px);
     }
 
     .active .bar2 {
@@ -123,12 +123,8 @@
     }
 
     .active .bar3 {
-        transform: rotate(45deg) translate(-16px, -9px);
+        transform: rotate(45deg) translate(-9px, -6px);
     }
-
-    /* .header_hamburgerBtn.active {
-        transform: rotate(-90deg) translate(14px);
-    } */
 
     .header_main_navbar {
         display: none;
@@ -151,7 +147,7 @@
         padding-left: 2rem;
         flex-direction: column;
         gap: 2rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
         border-radius: 0;
         position: relative;
         top: 50%;

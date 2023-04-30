@@ -1,17 +1,32 @@
-.area {
-    background: black;
+.socialsmap_header {
+    position: absolute;
+    bottom: 0;
+    left: 57%;
+    transform: translateX(-60%);
+    width: 14rem;
+}
+
+.header_socials {
     display: block;
-    opacity: 0;
+    width: 100%;
+}
+
+.area {
+    /* background: black; */
+    /* background: rgb(255, 0, 208); */
+    display: block;
+    opacity: 1;
     position: absolute;
     border-radius: 100%;
-    transition: 200ms ease;
+    /* transition: 200ms ease; */
 }
 
 #area1_header {
-    width: 64px;
-    height: 65.36px;
-    top: 52.64rem;
-    left: calc(100% - 221.7px);
+    width: 65px;
+    height: 65px;
+    top: 5.75rem;
+    left: 27.2%;
+    transform: translate(-30.5%);
 }
 
 #area1_header:hover {
@@ -19,15 +34,16 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
-    transition: 200ms ease;
-    scale: 1.3;
+    transition: scale 200ms ease;
+    scale: 1.1;
 }
 
 #area2_header {
-    width: 72px;
-    height: 72px;
-    top: 48.65rem;
-    left: calc(100% - 129.7px);
+    width: 65px;
+    height: 65px;
+    top: 2.6rem;
+    left: 61.4%;
+    transform: translate(-24.4%);
 
 }
 
@@ -36,8 +52,8 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
-    transition: 200ms ease;
-    scale: 1.2;
+    transition: scale 200ms ease;
+    scale: 1.1;
 }
 
 #area1_about {

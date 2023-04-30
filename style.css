@@ -42,6 +42,7 @@ header {
     background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
     background-size: auto, cover;
     background-repeat: no-repeat;
+    background-attachment: local, fixed;
     position: relative;
 }
 
@@ -70,11 +71,11 @@ h1 {
     color: var(--subTitle)
 }
 
-.header_socials {
+/* .header_socials {
     position: relative;
     bottom: 0;
     left: calc(100% - 277px);
-}
+} */
 
 section {
     width: 100%;
@@ -126,6 +127,8 @@ h2 {
     header {
         background-image: url(images/bg-main-secondary-mobile.svg), url(images/bg-main-mobile.png);
         background-size: 130% auto, cover;
+        background-attachment: local;
+        padding: 2rem 3rem;
     }
 
     .header_main_navbar {
@@ -140,15 +143,27 @@ h2 {
     }
 
     .header_title {
-        top: 2.5rem;
-        left: 2rem;
-        width: 30rem;
-        margin-bottom: 33rem;
+        position: unset;
+        width: 18rem;
+        /* margin-bottom: 33rem; */
+        gap: .5rem;
+    }
+
+    .header_title_logo {
+        width: 5.5rem;
     }
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 1.2rem;
         font-weight: 300;
+    }
+
+    .header_title_sub-title {
+        font-size: .9rem;
+    }
+
+    .about_container {
+        width: unset;
     }
 
     .about_text {
@@ -158,4 +173,32 @@ h2 {
     .br_hidden {
         display: block;
     }
+}
+
+@media (max-width: 450px) {
+
+    .header_hamburgerBtn {
+        top: 1.2rem;
+    }
+
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .header_title {
+        width: 15rem;
+    }
+
+    .header_title_logo {
+        width: 4.2rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .header_title_sub-title {
+        font-size: .8rem;
+    }
+
 }
