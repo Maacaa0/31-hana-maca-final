@@ -123,7 +123,7 @@
     }
 
     .active .bar3 {
-        transform: rotate(45deg) translate(-9px, -6px);
+        transform: rotate(45deg) translate(-11px, -7px);
     }
 
     .header_main_navbar {

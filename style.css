@@ -37,7 +37,7 @@ a {
 
 header {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
     background-size: auto, cover;
@@ -71,25 +71,21 @@ h1 {
     color: var(--subTitle)
 }
 
-/* .header_socials {
-    position: relative;
-    bottom: 0;
-    left: calc(100% - 277px);
-} */
 
 section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     padding: 5rem;
 }
 
 .about {
     position: relative;
-    background-image: url(images/shape-about.png), url(images/bg-about.png);
+    background-image: url(images/shape-about.png), url(images/test.png);
     background-position: calc(100% - 18rem) center, center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: local, fixed;
 
 }
 
@@ -112,7 +108,7 @@ h2 {
 
 .about_socials {
     position: relative;
-    left: calc(100% - 200px);
+    left: calc(100% - 232px);
     top: 13rem;
 }
 
@@ -162,6 +158,10 @@ h2 {
         font-size: .9rem;
     }
 
+    .about {
+        padding: 2rem 3rem;
+    }
+
     .about_container {
         width: unset;
     }
@@ -199,6 +199,19 @@ h2 {
 
     .header_title_sub-title {
         font-size: .8rem;
+    }
+
+    .about {
+        padding: 1rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about_text {
+        font-size: 1.2rem;
     }
 
 }
