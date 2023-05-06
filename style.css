@@ -1,5 +1,4 @@
 @import 'maps.css';
-@import 'navbar.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 :root {
@@ -35,6 +34,8 @@ a {
     text-decoration: none;
 }
 
+/* --------- MAIN SECTION - HEADER --------- */
+
 header {
     width: 100%;
     min-height: 100dvh;
@@ -46,15 +47,120 @@ header {
     position: relative;
 }
 
-.header_title {
+    /* hamburger-menu */
+
+.header_hamburgerBtn {
+    display: none;
+}
+
+
+.bar1, .bar2, .bar3 {
+    background-image: url(images/menu_bar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 85%;
+    height: 7px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+    /* -------------  */
+
+    /* main-navbar */
+
+ .header_main_navbar {
+    display: block;
+    width: fit-content;
+    padding-top: 3rem;
+    margin-left: auto;
+}
+
+.main_navbar {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.8rem;
+    list-style: none;
+    color: var(--text);
+    background: var(--navBg);
+    padding: 1rem 1.5rem calc(1rem - 3px) 1.5rem;
+    border-radius: .2rem 0 0 .2rem;
+}
+
+.main_navbar > li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--text);
     position: relative;
-    top: 14.5rem;
-    left: 7rem;
+    left: 50%;
+    top: .8rem;
+    transform: translateX(-50%);
+}
+
+.main_navbar > li:hover::after {
+    width: 100%;
+    transition: ease 300ms;
+}
+
+
+    /* dynamic-navbar */
+
+.main_dynamic_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    font-size: 1.5rem;
+    background: hsla(197, 81%, 6%, 0.837);
+    color: var(--text);
+    list-style: none;
+    padding: 0.5rem 2rem calc(0.5rem - 3px) 2rem;
+    transition: opacity 250ms ease;
+}
+
+.dynamic_menu_links_container > li {
+    border-bottom: 3px solid transparent;
+}
+
+.dynamic_menu_container {
+    display: flex;
+    align-items: center;
+}
+
+.dynamic_menu_logo {
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+.dynamic_menu_logo_title {
+    font-size: 1.2rem;
+    color: var(--textBasic);
+}
+
+.dynamic_menu_links_container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.dynamic_menu_container {
+    cursor: pointer;
+}
+
+/* ----------------------- */
+
+
+.header_title {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     width: 49rem;
-    margin-bottom: 29rem;
+    padding-top: 7rem;
+    margin-left: 6rem;
 }
 
 .header_title_logo {
@@ -72,12 +178,16 @@ h1 {
 }
 
 
+/* **********  ********** */
+
 section {
     width: 100%;
     min-height: 100dvh;
     height: auto;
     padding: 5rem;
 }
+
+/* --------- ABOUT SECTION --------- */
 
 .about {
     position: relative;
@@ -106,19 +216,20 @@ h2 {
     line-height: 2.3rem;
 }
 
-.about_socials {
-    position: relative;
-    left: calc(100% - 232px);
-    top: 13rem;
-}
-
 .br_hidden {
     display: none;
 }
 
+/* **********  ********** */
+
+
+
+
 /* -----media queries------ */
 
 @media (max-width: 1000px) {
+
+    /* --------- MAIN PAGE - HEADER - queries 1000px --------- */
 
     header {
         background-image: url(images/bg-main-secondary-mobile.svg), url(images/bg-main-mobile.png);
@@ -126,6 +237,36 @@ h2 {
         background-attachment: local;
         padding: 2rem 3rem;
     }
+
+    .header_hamburgerBtn {
+        z-index: 100;
+        display: block;
+        border: none;
+        background: none;
+        width: 50px;
+        height: 48px;
+        position: fixed;
+        left: calc(100% - 75px);
+        top: 2.7rem;
+        cursor: pointer;
+    }
+
+    .bar1, .bar3 {
+        transition: 0.3s;
+    }
+
+    .active .bar1 {
+        transform: rotate(-45deg) translate(-10px, 7px);
+    }
+
+    .active .bar2 {
+        opacity: 0;
+    }
+
+    .active .bar3 {
+        transform: rotate(45deg) translate(-11px, -7px);
+    }
+
 
     .header_main_navbar {
         display: flex;
@@ -135,13 +276,47 @@ h2 {
         top: 0;
         right: -50vw;
         width: 50vw;
+        padding-top: 0;
         transition: 0.3s cubic-bezier(.39,.58,.57,1);
     }
 
+    .header_main_navbar.shown {
+        right: 0;
+    }
+
+    .main_navbar {
+        position: relative;
+        
+        width: 100%;
+        height: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-top: 7rem;
+        padding-left: 2rem;
+
+        font-size: 2rem;
+        border-radius: 0;
+        /* top: 50%;
+        transform: translateY(-50%); */
+        background-color: hsla(197, 81%, 6%, .94);
+        overflow-y: scroll;
+    }
+
+    .main_navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main_navbar > li::after {
+        top: .3rem;
+    }
+   
+
     .header_title {
-        position: unset;
         width: 18rem;
-        /* margin-bottom: 33rem; */
+        margin: 0;
+        padding: 0;
         gap: .5rem;
     }
 
@@ -154,9 +329,23 @@ h2 {
         font-weight: 300;
     }
 
+    .br_hidden {
+        display: block;
+    }
+
     .header_title_sub-title {
         font-size: .9rem;
     }
+
+    .container {
+        transform: translate(20%, 25%)scale(0.5);
+        left: unset;
+        right: 0;
+    }
+
+    /* **********  ********** */
+
+    /* --------- ABOUT SECTION - queries --------- */
 
     .about {
         padding: 2rem 3rem;
@@ -170,9 +359,8 @@ h2 {
         font-size: 1.4rem;
     }
 
-    .br_hidden {
-        display: block;
-    }
+
+    /* **********  ********** */
 }
 
 @media (max-width: 450px) {
@@ -183,6 +371,11 @@ h2 {
 
     header {
         padding: 1rem 1.5rem;
+    }
+
+    .header_main_navbar {
+        right: -75vw;
+        width: 75vw;
     }
 
     .header_title {
@@ -214,4 +407,74 @@ h2 {
         font-size: 1.2rem;
     }
 
+}
+
+/* stop stupid socials icon overlaping other
+ elements while keeping it at the bottom of the screen  */
+@media (min-width: 1000px) and (max-height: 700px) {
+  .header_socials_container {
+        position: relative;
+    }
+}
+@media (max-width: 1000px) and (max-height: 250px) {
+    .header_socials_container {
+        position: relative;
+        right: 6rem;
+        top: 5rem;
+        transform: scale(.5);
+    }
+}
+
+
+    /* back-to-top BTN */
+
+.back-to-top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--text) url(images/icon_right.png) center no-repeat;
+    transform: rotate(-90deg);
+    position: sticky;
+    left: calc(100% - 80px);
+    bottom: 2rem;
+    opacity: .6;
+    border-radius: 1rem;
+    border: none;
+    opacity: .8;
+    transition: opacity 250ms ease-in-out;
+}
+
+.back-to-top:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -10;
+}
+        /* -------- */
+
+
+        /* custom scrollbar??? */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #5c7e00;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #0f1918;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0a1905;
 }
