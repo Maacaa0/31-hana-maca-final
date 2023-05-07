@@ -52,5 +52,23 @@ const scrollContainer = () => {
     }
   });
 
+let touchStart, touchEnd;
+
+menu.addEventListener(
+  'touchstart',
+  e => (touchStart = e.targetTouches[0].clientX)
+);
+
+menu.addEventListener(
+  'touchmove',
+  e => (touchEnd = e.targetTouches[0].clientX)
+);
+
+menu.addEventListener('touchend', e => {
+  if (touchStart - touchEnd > 45) {
+    menu.classList.remove('shown')
+  }
+})
+
   // ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦
 
