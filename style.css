@@ -8,6 +8,9 @@
     --textBasic: #FFFFFF;
     --panel: hsla(193, 23%, 12%, 0.97);
     --navBg: hsla(196, 82%, 6%, 0.627);
+    --swiper-pagination-bottom: -2rem;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-color: var(--text);
 }
 
 ::selection {
@@ -42,6 +45,7 @@ header {
     height: auto;
     background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
     background-size: auto, cover;
+    background-position-y: 0, -10rem;
     background-repeat: no-repeat;
     background-attachment: local, fixed;
     position: relative;
@@ -155,6 +159,8 @@ header {
 
 
 .header_title {
+    /* position: fixed; */
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -185,6 +191,7 @@ section {
     min-height: 100dvh;
     height: auto;
     padding: 5rem;
+    z-index: 2;
 }
 
 /* --------- ABOUT SECTION --------- */
@@ -222,6 +229,388 @@ h2 {
 
 /* **********  ********** */
 
+.history {
+    background-image: url(images/shape_right.png), url(images/bg-history.png);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-attachment: local, fixed;
+    background-position: -10rem 0, center;
+    position: relative;
+    z-index: 2;
+}
+
+.history_title {
+    text-align: right;
+}
+
+.history_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.history_selection_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -4rem;
+    margin: auto 0;
+
+    width: 30rem;
+}
+
+.history_link {
+    width: 20rem;
+    cursor: pointer;
+    transition: transform 150ms ease;
+    filter: grayscale(1);
+}
+
+.history_link:hover::before {
+    content: url(images/icon_right.png);
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    top: 8.6rem;
+    right: -15rem;
+    filter: invert(1);
+    transition: 250ms ease;
+}
+
+.history_chemical::after, .history_liberec::after, .history_barracs::after {
+    font-size: 1.2rem;
+    color: var(--textBasic);
+    position: absolute;
+    bottom: 7.8rem;
+    left: 19rem;
+    width: 6rem;
+    display: block;
+} 
+
+ .history_chemical::after {
+    content: "historie chemického vojska";
+}
+
+.history_liberec::after {
+    content: "historie vojsk v Liberci";
+}
+
+.history_barracs::after {
+    content: "historie kasáren";
+}
+
+
+.history_link:hover {
+    transform: scale(1.04);
+    filter: grayscale(0);
+    z-index: 2;
+}
+
+.history_liberec {
+    align-self: flex-end;
+    /* z-index: 2; */
+}
+
+.history_liberec, .history_barracs {
+    margin-top: -4rem;
+}
+
+.history_content {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    height: fit-content;
+    inset: 0;
+    margin: 0 auto;
+    top: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: var(--textBasic);
+    background-image: linear-gradient(0deg, rgba(15,18,14,1) 0%, rgba(52,61,42,1) 48%, rgba(15,18,14,1) 100%);
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.5rem;
+    transition: 200ms ease-in-out;
+}
+
+.shadow-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #000000a8;
+}
+
+.display-none {
+    display: none;
+}
+
+.history_close_btn {
+    background: url(images/vector_x.png) center no-repeat;
+    border: none;
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.history_title_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.history_button {
+    height: 50px;
+    width: 50px;
+    background: url(images/icon_right.svg) transparent center no-repeat;
+    background-size: 38%;
+    border: none;
+    cursor: pointer;
+}
+
+.history_button:hover {
+    background-size: 45%;
+    transition: 200ms ease;
+}
+
+#historyPrevBtn {
+    transform: rotate(180deg);
+}
+
+.history_content_title {
+    font-size: 2.2rem;
+    color: var(--text);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.history_content_text {
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    color: #abababb0;
+}
+
+.history_content_imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history_content_img {
+    max-width: 21rem;
+    min-width: 6rem;
+}
+
+h4 {
+    margin-bottom: 1rem;
+    color: #ababab;
+}
+
+/* --------- CAREER SECTION --------- */
+
+.career {
+    background-image: url(images/bg-career.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.career_text {
+    font-size: 1.6rem;
+    color: var(--textBasic);
+    line-height: 2.3rem;
+}
+
+.career_div1 {
+    margin-bottom: 4rem;
+}
+
+.career_div1 p {
+    margin-bottom: 2rem;
+}
+
+.career_list {
+    margin-left: 3rem;
+}
+
+.career_link {
+    color: var(--text);
+}
+
+.career_link:hover {
+    color: var(--subTitle);
+}
+
+.career_link:visited {
+    color: var(--subTitle);
+}
+
+#career swiper-container {
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    overflow-inline: clip;
+    overflow-x: clip;
+}
+
+
+#career swiper-slide img {
+    display: block;
+}
+
+.career_swiperItem {
+    background-image: url(images/career_shape.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid var(--text);
+    border-radius: 10px;
+    padding: 19px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: var(--textBasic);
+}
+
+.swiperItem_header {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.swiperItem_position {
+    text-transform: uppercase;
+    font-size: calc(24rem/16);
+    flex-basis: 50%;
+    display: block;
+}
+
+.swiperItem_rank {
+    flex-basis: 30%;
+    object-fit: scale-down;
+    max-height: 30px;
+}
+
+.swiperItem_hr {
+    width: calc(100% + 60px);
+    height: 3px;
+    background: var(--text);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+}
+
+.swiperItem_description {
+    margin-top: 2rem;
+}
+
+/* **********  ********** */
+
+/* --------- GALLERY SECTION --------- */
+
+.gallery {
+    background-image: url(images/bg-gallery.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  body {
+    background: #000;
+    color: #000;
+  }
+
+  swiper-container {
+    width: 75%;
+    height: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  swiper-slide img.mini {
+    object-fit: cover;
+  }
+
+  .mySwiper {
+    width: 75%;
+  }
+
+  .mySwiper2 {
+    height: 15vh;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  swiper-slide .mini {
+    cursor: pointer;
+  }
+
+
+/* **********  ********** */
 
 
 
@@ -234,7 +623,8 @@ h2 {
     header {
         background-image: url(images/bg-main-secondary-mobile.svg), url(images/bg-main-mobile.png);
         background-size: 130% auto, cover;
-        background-attachment: local;
+        background-attachment: fixed;
+        background-position: unset;
         padding: 2rem 3rem;
     }
 
@@ -298,8 +688,7 @@ h2 {
 
         font-size: 2rem;
         border-radius: 0;
-        /* top: 50%;
-        transform: translateY(-50%); */
+
         background-color: hsla(197, 81%, 6%, .94);
         overflow-y: scroll;
     }
@@ -347,7 +736,7 @@ h2 {
 
     /* --------- ABOUT SECTION - queries --------- */
 
-    .about {
+    section {
         padding: 2rem 3rem;
     }
 
@@ -361,7 +750,112 @@ h2 {
 
 
     /* **********  ********** */
+
+    /* --------- HISTORY SECTION - queries --------- */
+
+    .history {
+        background-image: url(images/shape-about.png), url(images/bg-history.png);
+        background-size: cover;
+        background-position: -1rem, center;
+    }
+
+    .history_title {
+        text-align: left;
+    }
+    
+    .history_container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+    }
+
+    .history_selection_container {
+        flex-direction: row;
+        top: 4rem;
+        width: auto;
+        transform: scale(.8);
+    }
+
+    .history_selection_container > * {
+        font-size: 0;
+    }
+
+    .history_link {
+        width: 100%;
+        transform: scale(0.8);
+        filter: grayscale(0);
+    }
+
+    .history_link:hover {
+        transform: scale(.9);
+    }
+
+    .history_link:hover::before {
+        transform: rotate(-90deg);
+        top: 3.6rem;
+        right: -7.8rem;
+    }
+
+    .history_chemical::after,
+    .history_liberec::after,
+    .history_barracs::after {
+        bottom: 20.1rem;
+        left: 0rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+
+    .history_liberec::after {
+        /* top: -2.2rem; */
+    }
+
+    .history_barracs {
+        margin-top: 0;
+    }
+
+    .history_content {
+        font-size: 1rem;
+        line-height: unset;
+    }
+
+    section#gallery {
+        padding-left: 1rem;
+        padding-right: 1rem;
+     }
+ 
+             #gallery .mySwiper {
+         width: 100%;
+     }
+ 
+             #gallery swiper-container {
+         width: 100%;
+         height: 60vh;
+     }
 }
+
+@media (max-width: 650px) {
+
+    .history_selection_container {
+        transform: scale(0.6);
+    }
+
+    .history_chemical::after,
+    .history_liberec::after,
+    .history_barracs::after {
+        font-size: 1.6rem;
+    }
+
+    #gallery swiper-container {
+        width: 100%;
+        height: 33vh;
+    }
+
+        #gallery .mySwiper2 swiper-slide {
+        height: 50%;
+    }
+}
+
 
 @media (max-width: 450px) {
 
@@ -394,17 +888,25 @@ h2 {
         font-size: .8rem;
     }
 
-    .about {
+    section {
         padding: 1rem 1.5rem;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 
     .about_text {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .history_content_title {
+        font-size: 1.8rem;
+    }
+
+    .history_button {
+        background-size: 30%;
     }
 
 }
@@ -429,7 +931,7 @@ h2 {
     /* back-to-top BTN */
 
 .back-to-top {
-    display: block;
+    display: none;
     width: 50px;
     height: 50px;
     background: var(--text) url(images/icon_right.png) center no-repeat;
@@ -452,11 +954,12 @@ h2 {
 .hidden {
     opacity: 0;
     z-index: -10;
+    /* transition: 150ms ease-in; */
 }
         /* -------- */
 
 
-        /* custom scrollbar??? */
+    /* custom scrollbar??? */
 
 ::-webkit-scrollbar {
     width: 10px;

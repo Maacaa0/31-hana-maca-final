@@ -9,6 +9,7 @@
 
     <link rel="icon" type="image/x-icon" href="images/web-ico.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     
 </head>
 <body>
@@ -51,7 +52,7 @@
         </ul>
                 <!-- -------------- -->
         <div class="header_title">
-            <img class="header_title_logo" src="images/logo_landingPage.svg" alt="logo">
+            <img class="header_title_logo" src="images/logo_landingPage_edit.svg" alt="logo">
             <div class="header_title_container">
                 <h1>PLUK RADIAČNÍ, CHEMICKÉ <br class="br_hidden"> A BIOLOGICKÉ OCHRANY</h1>
                 <span class="header_title_sub-title">generálmajora Oskara Starkoče</span>
@@ -85,9 +86,196 @@
           </div>
     </section>
 
-    <a href="#header" id="scrollBtn" class="back-to-top"></a>
+    <section id="history" class="history">
+        <h2 class="history_title">HISTORIE</h2>
+        <div class="history_container">
+            <div class="history_selection_container">
+                <picture id="chemVojsko" class="history_link history_chemical" role="button" tabindex="0">
+                    <img src="images/chem_vojsko.png" alt="chemické vojsko">
+                </picture>
+
+                <picture id="lbcVojsko" class="history_link history_liberec" role="button" tabindex="0">
+                    <img src="images/lbc_vojsko_historie.png" alt="chemické vojsko v liberci">
+                </picture>
+                <picture id="kasarna" class="history_link history_barracs" role="button" tabindex="0">
+                    <img src="images/kas_historie.png" alt="historie kasáren">
+                </picture>
+            </div>
+            <div id="history_content" class="history_content hidden">
+                <div class="shadow-background display-none"></div>
+                <button id="historyCloseBtn" class="history_close_btn"></button>
+                <div class="history_title_container">
+                    <button class="history_button" id="historyPrevBtn"></button>
+                    <h3 id="historyTitle" class="history_content_title">TITLE</h3>
+                    <button class="history_button" id="historyNextBtn"></button>
+                </div>
+                <div id="historyText" class="history_content_text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus laborum odio porro aliquid, nemo repellendus, nesciunt, eum commodi neque voluptatum unde voluptates. Harum animi dolores voluptatum dolore sequi! Amet?
+                </div>
+                <div class="history_content_imgs">
+                    <img class="history_content_img" src="#" alt="">
+                    <img class="history_content_img" src="#" alt="">
+                    <img class="history_content_img" src="#" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="career" class="career">
+        <h2>KARIÉRA</h2>
+        <div class="career_text career_div1">
+          <p>Jak se stát jedním z nás?</p>
+          <ul class="career_list">
+            <li>vyplň formulář na <a class="career_link" href="https://kariera.army.cz/">kariera.army.cz</a></li>
+            <li>zavolej na infolinku <a class="career_link" href="tel:+420800154445">800 154 445</a></li>
+            <li>doraž na <a class="career_link" href="https://goo.gl/maps/dLvFHKK1We4GkBL99">rekrutační středisko</a></li>
+          </ul>
+        </div>
+  
+        <p class="career_text">Volná místa u 31. pluku</p>
+         
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" slides-per-view="3">
+  
+          <swiper-slide class="career_swiperItem job">
+            <div class="swiperItem_header">
+              <p class="swiperItem_position"></p>
+              <img class="swiperItem_rank" src="images\hodnosti\desatnik.png"></img>
+            </div>
+            <hr class="swiperItem_hr">
+            <p class="swiperItem_description1 swiperItem_description"></p>
+            <p class="swiperItem_description2 swiperItem_description"></p>
+            <p class="swiperItem_description3 swiperItem_description"></p>
+          </swiper-slide>
+  
+          <swiper-slide class="career_swiperItem job">
+            <div class="swiperItem_header">
+              <p class="swiperItem_position"></p>
+              <img class="swiperItem_rank"></img>
+            </div>
+            <hr class="swiperItem_hr">
+            <p class="swiperItem_description1 swiperItem_description"></p>
+            <p class="swiperItem_description2 swiperItem_description"></p>
+            <p class="swiperItem_description3 swiperItem_description"></p>
+          </swiper-slide>
+  
+          <swiper-slide class="career_swiperItem job">
+            <div class="swiperItem_header">
+              <p class="swiperItem_position"></p>
+              <img class="swiperItem_rank"></img>
+            </div>
+            <hr class="swiperItem_hr">
+            <p class="swiperItem_description1 swiperItem_description"></p>
+            <p class="swiperItem_description2 swiperItem_description"></p>
+            <p class="swiperItem_description3 swiperItem_description"></p>
+          </swiper-slide>
+  
+          <swiper-slide class="career_swiperItem job">
+            <div class="swiperItem_header">
+              <p class="swiperItem_position"></p>
+              <img class="swiperItem_rank"></img>
+            </div>
+            <hr class="swiperItem_hr">
+            <p class="swiperItem_description1 swiperItem_description"></p>
+            <p class="swiperItem_description2 swiperItem_description"></p>
+            <p class="swiperItem_description3 swiperItem_description"></p>
+          </swiper-slide>
+  
+          <swiper-slide class="career_swiperItem job">
+            <div class="swiperItem_header">
+              <p class="swiperItem_position"></p>
+              <img class="swiperItem_rank"></img>
+            </div>
+            <hr class="swiperItem_hr">
+            <p class="swiperItem_description1 swiperItem_description"></p>
+            <p class="swiperItem_description2 swiperItem_description"></p>
+            <p class="swiperItem_description3 swiperItem_description"></p>
+          </swiper-slide>
+  
+    
+      
+        </swiper-container>
+  
+      </section>
+  
+
+    <section id="gallery" class="gallery">
+
+        <swiper-container style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
+    thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+    <swiper-slide>
+      <img src="./images/gallery/1.jpg"/>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/2.jpg"/>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/3.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/4.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/5.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/6.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/7.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/8.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/9.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/10.jpg" />
+    </swiper-slide>
+  </swiper-container>
+
+  <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+    watch-slides-progress="true">
+    <swiper-slide>
+      <img class="mini" src="images\gallery\1.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\2.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\3.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\4.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\5.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\6.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\7.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\8.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\9.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\10.jpg" />
+    </swiper-slide>
+  </swiper-container>
+
+    </section>
+
+    <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
 
     <script src="main.js"></script>
+    <script src="career.js"></script>
     <script src="https://kit.fontawesome.com/e02d150246.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script> 
 </body>
 </html>
