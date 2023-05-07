@@ -65,10 +65,10 @@ menu.addEventListener(
 );
 
 menu.addEventListener('touchend', e => {
-  if (touchStart - touchEnd > 45) {
-    menu.classList.remove('shown')
+  if (touchEnd - touchStart > 45) {
+    hamburgerBtn.classList.remove("active");
+    menu.classList.remove('shown');
   }
 })
-
   // ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦ ♦♦♦♦♦♦♦♦♦
 
