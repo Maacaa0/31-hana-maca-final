@@ -21,14 +21,14 @@
             <span class="bar2"></span>
             <spanc class="bar3"></span>
         </button>
-                <!-- main navbar -->
         
+                <!-- main navbar -->
         
         <nav class="header_main_navbar" id="menu">
             <ul class="main_navbar">
                 <li><a href="#about">O NÁS</a></li>
                 <li><a href="#history">HISTORIE</a></li>
-                <li><a href="#">KARIÉRA</a></li>
+                <li><a href="#career">KARIÉRA</a></li>
                 <li><a href="#">KONTAKT</a></li>
                 <li><a href="#gallery">GALERIE</a></li>
             </ul>
@@ -45,7 +45,7 @@
             <div class="dynamic_menu_links_container">
                 <li><a href="#about">O NÁS</a></li>
                 <li><a href="#history">HISTORIE</a></li>
-                <li><a href="#">KARIÉRA</a></li>
+                <li><a href="#career">KARIÉRA</a></li>
                 <li><a href="#">KONTAKT</a></li>
                 <li><a href="#gallery">GALERIE</a></li>
             </div>
@@ -90,37 +90,47 @@
         <h2 class="history_title">HISTORIE</h2>
         <div class="history_container">
             <div class="history_selection_container">
-                <picture id="chemVojsko" class="history_link history_chemical" role="button" tabindex="0">
+                <btn id="chemVojsko" class="history_link history_chemical" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/pohlednice.jpg" />
                     <img src="images/chem_vojsko.png" alt="chemické vojsko">
-                </picture>
+                  </picture>
+                </btn>
 
-                <picture id="lbcVojsko" class="history_link history_liberec" role="button" tabindex="0">
+                <btn id="lbcVojsko" class="history_link history_liberec" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/mist.jpg" />
                     <img src="images/lbc_vojsko_historie.png" alt="chemické vojsko v liberci">
-                </picture>
-                <picture id="kasarna" class="history_link history_barracs" role="button" tabindex="0">
-                    <img src="images/kas_historie.png" alt="historie kasáren">
-                </picture>
+                  </picture>
+                </btn>
+                <btn id="kasarna" class="history_link history_barracs" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/kas610.jpg" />
+                    <img src="images/kas_historie.png" alt="chemické vojsko v liberci">
+                  </picture>
+                </btn>
             </div>
-            <div id="history_content" class="history_content hidden">
-                <div class="shadow-background display-none"></div>
-                <button id="historyCloseBtn" class="history_close_btn"></button>
-                <div class="history_title_container">
-                    <button class="history_button" id="historyPrevBtn"></button>
-                    <h3 id="historyTitle" class="history_content_title">TITLE</h3>
-                    <button class="history_button" id="historyNextBtn"></button>
-                </div>
-                <div id="historyText" class="history_content_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus laborum odio porro aliquid, nemo repellendus, nesciunt, eum commodi neque voluptatum unde voluptates. Harum animi dolores voluptatum dolore sequi! Amet?
-                </div>
-                <div class="history_content_imgs">
-                    <img class="history_content_img" src="#" alt="">
-                    <img class="history_content_img" src="#" alt="">
-                    <img class="history_content_img" src="#" alt="">
-                </div>
-            </div>
+            
         </div>
         
     </section>
+
+    <div id="history_content" class="history_content hidden">
+      <button id="historyCloseBtn" class="history_close_btn"></button>
+      <div class="history_title_container">
+          <button class="history_button" id="historyPrevBtn"></button>
+          <h3 id="historyTitle" class="history_content_title">TITLE</h3>
+          <button class="history_button" id="historyNextBtn"></button>
+      </div>
+      <div id="historyText" class="history_content_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus laborum odio porro aliquid, nemo repellendus, nesciunt, eum commodi neque voluptatum unde voluptates. Harum animi dolores voluptatum dolore sequi! Amet?
+      </div>
+      <div class="history_content_imgs">
+          <img class="history_content_img" src="#" alt="">
+          <img class="history_content_img" src="#" alt="">
+          <img class="history_content_img" src="#" alt="">
+      </div>
+  </div>
 
     <section id="career" class="career">
         <h2>KARIÉRA</h2>
@@ -140,7 +150,7 @@
           <swiper-slide class="career_swiperItem job">
             <div class="swiperItem_header">
               <p class="swiperItem_position"></p>
-              <img class="swiperItem_rank" src="images\hodnosti\desatnik.png"></img>
+              <img class="swiperItem_rank"></img>
             </div>
             <hr class="swiperItem_hr">
             <p class="swiperItem_description1 swiperItem_description"></p>

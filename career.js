@@ -52,13 +52,13 @@ let jobs = document.querySelectorAll(".job");
 
 window.addEventListener("load", () => {
 
-    if (window.innerWidth < BREAKPOINT_TABLET) {
-      swiperCareer.setAttribute("slides-per-view", "2");
-    } 
+    // if (window.innerWidth < BREAKPOINT_TABLET) {
+    //   swiperCareer.setAttribute("slides-per-view", "2");
+    // } 
     
-    if (window.innerWidth < BREAKPOINT_MOBILE) {
-      swiperCareer.setAttribute("slides-per-view", "1");
-    }
+    // if (window.innerWidth < BREAKPOINT_MOBILE) {
+    //   swiperCareer.setAttribute("slides-per-view", "1");
+    // }
 
     jobs.forEach((job, jobsIndex) => {
 
@@ -69,7 +69,7 @@ window.addEventListener("load", () => {
     let description3 = job.querySelector(".swiperItem_description3");
 
     position.textContent = data.positions[jobsIndex].name;
-    rank.src = `images\\hodnosti\\${data.positions[jobsIndex].rank}.svg`;
+    rank.src = `images/hodnosti/${data.positions[jobsIndex].rank}.svg`;
     description1.textContent = data.positions[jobsIndex].description1;
     description2.textContent = data.positions[jobsIndex].description2;
     description3.textContent = data.positions[jobsIndex].description3;
