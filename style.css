@@ -375,6 +375,7 @@ h2 {
     z-index: 11;
     overflow-y: auto;
     inset: 0;
+    top: 10%;
     margin: 0 auto;
 
     display: flex;
@@ -669,6 +670,10 @@ swiper-container {
 
 .contact_row2 {
     flex-wrap: wrap;
+}
+
+.contact_img {
+    max-width: 100%;
 }
 
 .footer {
@@ -997,7 +1002,7 @@ swiper-container {
 
 /* stop stupid socials icon overlaping other
  elements while keeping it at the bottom of the screen  */
-@media (min-width: 1000px) and (max-height: 700px) {
+/* @media (min-width: 1000px) and (max-height: 700px) {
   .header_socials_container {
         position: relative;
         left: 0;
@@ -1010,7 +1015,7 @@ swiper-container {
         top: 5rem;
         transform: scale(.5);
     }
-}
+} */
 
 
     /* back-to-top BTN */
