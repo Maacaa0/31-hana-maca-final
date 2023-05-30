@@ -8,7 +8,7 @@ const scrollContainer = () => {
   };
   
 document.addEventListener("scroll", () => {
-  if (window.screen.width > 800) {
+  if (window.innerWidth > 1000) {
       if (window.scrollY < 100) {
       menu.classList.remove("sticky-menu");
       menuDescp.style.display = "none";

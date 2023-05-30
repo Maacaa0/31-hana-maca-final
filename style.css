@@ -45,7 +45,7 @@ header {
     min-height: 100dvh;
     height: auto;
     background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
-    background-size: auto, contain;
+    background-size: auto, cover;
     /* background-position-y: auto, -10rem; */
     background-repeat: no-repeat;
     background-attachment: local;
@@ -224,7 +224,7 @@ header {
 }
 
 h1 {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     font-size: 3rem;
     color: var(--title);
 }
@@ -375,20 +375,20 @@ h2 {
     z-index: 11;
     overflow-y: auto;
     inset: 0;
-    top: 10%;
+    top: 15%;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
     width: 90%;
-    height: 100%;
+    height: 80%;
     font-size: 1.6rem;
     line-height: 2.3rem;
     background-image: linear-gradient(0deg, rgba(15,18,14,1) 0%, rgba(52,61,42,1) 48%, rgba(15,18,14,1) 100%);
     padding: 1.5rem 2.5rem;
     transition: 200ms ease-in-out;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -656,6 +656,9 @@ swiper-container {
 /* **********  ********** */
 
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #3F483E;
 }
 
@@ -782,6 +785,10 @@ swiper-container {
     .main_navbar>li:hover::after {
         width: 100%;
         transition: ease 300ms;
+    }
+
+    .main_descp {
+        display: none;
     }
    
 

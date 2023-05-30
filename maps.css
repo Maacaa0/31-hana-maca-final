@@ -77,7 +77,7 @@
 .fb:hover,
 .wiki:hover,
 .yt:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background: #5d513e;
   transition: 150ms ease;
 }
