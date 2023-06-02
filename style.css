@@ -690,7 +690,7 @@ swiper-container {
 }
 
 .footer_socials_ul {
-    /* position: absolute; */
+    position: relative;
     bottom: 0;
     list-style: none;
     background: #878b6e54;
