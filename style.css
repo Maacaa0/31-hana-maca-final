@@ -1041,6 +1041,10 @@ swiper-container {
         background-size: 30%;
     }
 
+    .career_text {
+        font-size: 1.1rem;
+    }
+
     .contact {
         padding: 1rem 1.5rem;
      }
