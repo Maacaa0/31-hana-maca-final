@@ -610,7 +610,7 @@ swiper-container {
 /* **********  ********** */
 
 .contact {
-    min-height: 50vh;
+    min-height: 30vh;
     padding: 3rem;
     /* background-color: #3F483E; */
     background: #444e23;
@@ -618,7 +618,7 @@ swiper-container {
 
 .contact_row1 {
     display: grid;
-    justify-content: start;
+    /* justify-content: start; */
     align-items: center;
     justify-items: center;
     grid-template-columns: auto auto auto;
@@ -627,7 +627,7 @@ swiper-container {
 
 
 .contact_img {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .border-radius {
@@ -637,6 +637,7 @@ swiper-container {
 .footer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 4rem;
     position: relative;
 
@@ -645,7 +646,7 @@ swiper-container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 40vh;
+    min-height: 50vh;
     height: auto;
     padding: 3rem;
     /* padding-bottom: 0; */
@@ -689,7 +690,7 @@ swiper-container {
 }
 
 .footer_socials_ul {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     list-style: none;
     background: #878b6e54;
@@ -1053,7 +1054,7 @@ swiper-container {
     display: none;
     width: 50px;
     height: 50px;
-    background: var(--text) url(images/icon_right.png) center no-repeat;
+    /* background: var(--text) url(images/icon_right.png) center no-repeat; */
     transform: rotate(-90deg);
     position: sticky;
     left: calc(100% - 80px);
