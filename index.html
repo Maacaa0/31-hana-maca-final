@@ -9,73 +9,53 @@
 
     <link rel="icon" type="image/x-icon" href="images/web-ico.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <script src="https://api.mapy.cz/loader.js"></script>
+	  <script>Loader.load()</script>
+  
     
 </head>
 <body>
-    <button class="header_hamburgerBtn" id="hamburgerBtn">
-        <span class="bar1"></span>
-        <span class="bar2"></span>
-        <spanc class="bar3"></span>
-    </button>
-
+    
     <header id="header">
-
+        
+        <button class="header_hamburgerBtn" id="hamburgerBtn">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <spanc class="bar3"></span>
+        </button>
+        
                 <!-- main navbar -->
-        
-        
         <nav class="header_main_navbar" id="menu">
+          <a href="#header" class="main_descp" id="menuDescp">
+            <img src="images\logo_menu.svg" alt="" class="descp_logo">
+            <p class="descp_text">31. pluk</p>
+          </a>
             <ul class="main_navbar">
-                <li><a href="#about">O NÁS</a></li>
-                <li><a href="#history">HISTORIE</a></li>
-                <li><a href="#">KARIÉRA</a></li>
-                <li><a href="#">KONTAKT</a></li>
-                <li><a href="#gallery">GALERIE</a></li>
+                <li id="about_li" class="menu_li"><a href="#about">O NÁS</a></li>
+                <li id="history_li" class="menu_li"><a href="#history">HISTORIE</a></li>
+                <li id="career_li" class="menu_li"><a href="#career">KARIÉRA</a></li>
+                <li id="gallery_li" class="menu_li"><a href="#gallery">GALERIE</a></li>
+                <li id="contact_li" class="menu_li"><a href="#contact">KONTAKT</a></li>
             </ul>
         </nav>
-        
                 <!-- -------------- -->
 
-                <!-- dynamic navbar -->
-        <ul id="dynamic_menu" class="main_dynamic_menu hidden">
-            <a href="#main" class="dynamic_menu_container">
-                <img class="dynamic_menu_logo" src="images/logo0.png" alt="logo">
-                <span class="dynamic_menu_logo_title">31. PRCHBO</span>
-            </a>
-            <div class="dynamic_menu_links_container">
-                <li><a href="#about">O NÁS</a></li>
-                <li><a href="#history">HISTORIE</a></li>
-                <li><a href="#">KARIÉRA</a></li>
-                <li><a href="#">KONTAKT</a></li>
-                <li><a href="#gallery">GALERIE</a></li>
-            </div>
-        </ul>
+        </ul> 
                 <!-- -------------- -->
         <div class="header_title">
-            <img class="header_title_logo" src="images/logo_landingPage.svg" alt="logo">
+            <img class="header_title_logo" src="images/logo_landingPage_edit.svg" alt="logo">
             <div class="header_title_container">
                 <h1>PLUK RADIAČNÍ, CHEMICKÉ <br class="br_hidden"> A BIOLOGICKÉ OCHRANY</h1>
                 <span class="header_title_sub-title">generálmajora Oskara Starkoče</span>
             </div>
         </div>    
-        
-        <map class="socialsmap_header" name="socialsmap_header">
-                <img class="header_socials" src="images/socials-fb-ig.svg" alt="social-sites" usemap="#socialsmap_header">
-                <area class="area" 
-                        id="area1_header" 
-                        shape="circle" 
-                        coords="90,150, 35" 
-                        href="https://www.facebook.com/31prchbo" 
-                        target="_blank" 
-                        alt="facebook-link">
-
-                <area class="area" 
-                        id="area2_header" 
-                        shape="circle" 
-                        coords="180,85,37" 
-                        href="https://www.instagram.com/31.pluk_liberec/" 
-                        target="_blank" 
-                        alt="instagram-link">
-            </map>
+        <div class="container header_socials_container fb-ig">
+            <a target="_blank" href="https://www.instagram.com/31.pluk_liberec/"  class="ig icons"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank"  href="https://www.facebook.com/31prchbo" class="fb icons"><i class="fa-brands fa-facebook-f"></i></a>
+            
+          </div>
 
     </header>
     
@@ -92,29 +72,231 @@
             </p>
         </article>
         
-        <img class="about_socials" src="images/socials-wiki-yt.svg" alt="social-sites" usemap="#socialsmap_about">
-
-            <map name="socialsmap_about">
-                <area class="area" 
-                        id="area1_about" 
-                        shape="circle" 
-                        coords="90,150, 35" 
-                        href="https://cs.wikipedia.org/wiki/Pozemn%C3%AD_s%C3%ADly_Arm%C3%A1dy_%C4%8Cesk%C3%A9_republiky?fbclid=IwAR0ytKYGmyjsoKPopZuvdzVLROF0V7Js2fuXud8CkrNVFMryBbqRKJ_W6FA#Chemick%C3%A9_vojsko" 
-                        target="_blank" 
-                        alt="wikipedia-link">
-
-                <area class="area" 
-                        id="area2_about" 
-                        shape="circle" 
-                        coords="180,85,37" 
-                        href="https://www.youtube.com/watch?v=pjPagpx51XI" 
-                        target="_blank" 
-                        alt="youtube-link">
-            </map>
+        <div class="container about_socials_container wiki-yt">
+            <a target="_blank" href="https://cs.wikipedia.org/wiki/Pozemn%C3%AD_s%C3%ADly_Arm%C3%A1dy_%C4%8Cesk%C3%A9_republiky?fbclid=IwAR0ytKYGmyjsoKPopZuvdzVLROF0V7Js2fuXud8CkrNVFMryBbqRKJ_W6FA#Chemick%C3%A9_vojsko"  class="wiki icons"><i class="fa-brands fa-wikipedia-w"></i></a>
+            <a target="_blank"  href="https://www.youtube.com/watch?v=pjPagpx51XI" class="yt icons"><i class="fa-brands fa-youtube"></i></a>
+            
+          </div>
     </section>
 
-<a href="#header" id="scrollBtn" class="back-to-top"></a>
+    <section id="history" class="history">
+        <h2 class="history_title">HISTORIE</h2>
+        <div class="history_container">
+            <div class="history_selection_container">
+                <btn id="chemVojsko" class="history_link history_chemical" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/pohlednice.jpg" />
+                    <img src="images/chem_vojsko.png" alt="chemické vojsko">
+                  </picture>
+                </btn>
+
+                <btn id="lbcVojsko" class="history_link history_liberec" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/mist.jpg" />
+                    <img src="images/lbc_vojsko_historie.png" alt="chemické vojsko v liberci">
+                  </picture>
+                </btn>
+                <btn id="kasarna" class="history_link history_barracs" role="button" tabindex="0">
+                  <picture>
+                    <source media="(max-width: 1000px)" srcset="images/kas610.jpg" />
+                    <img src="images/kas_historie.png" alt="chemické vojsko v liberci">
+                  </picture>
+                </btn>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <div id="history_content" class="history_content hidden">
+      <button id="historyCloseBtn" class="history_close_btn"></button>
+      <div class="history_title_container">
+          <button class="history_button" id="historyPrevBtn"></button>
+          <h3 id="historyTitle" class="history_content_title">TITLE</h3>
+          <button class="history_button" id="historyNextBtn"></button>
+      </div>
+      <div id="historyText" class="history_content_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus laborum odio porro aliquid, nemo repellendus, nesciunt, eum commodi neque voluptatum unde voluptates. Harum animi dolores voluptatum dolore sequi! Amet?
+      </div>
+      <div class="history_content_imgs">
+          <img class="history_content_img" src="#" alt="">
+          <img class="history_content_img" src="#" alt="">
+          <img class="history_content_img" src="#" alt="">
+      </div>
+  </div>
+
+    <section id="career" class="career">
+        <h2 class="career_h2">KARIÉRA</h2>
+        <div class="career_text career_div1">
+          <p>Jak se stát jedním z nás?</p>
+          <ul class="career_list">
+            <li>vyplň formulář na <a class="career_link" href="https://kariera.army.cz/">kariera.army.cz</a></li>
+            <li>zavolej na infolinku <a class="career_link" href="tel:+420800154445">800 154 445</a></li>
+            <li>doraž na <a class="career_link" href="https://goo.gl/maps/dLvFHKK1We4GkBL99">rekrutační středisko</a></li>
+          </ul>
+        </div>
+  
+        <p class="career_text">Volná místa u 31. pluku</p>
+         
+        <swiper-container id="swiperCareer" class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" slides-per-view="3">
+  
+          
+      
+        </swiper-container>
+  
+      </section>
+  
+
+    <section id="gallery" class="gallery">
+
+        <swiper-container style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
+    thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+    <swiper-slide>
+      <img src="./images/gallery/1.jpg"/>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/2.jpg"/>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/3.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/4.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/5.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/6.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/7.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/8.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/9.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./images/gallery/10.jpg" />
+    </swiper-slide>
+  </swiper-container>
+
+  <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+    watch-slides-progress="true">
+    <swiper-slide>
+      <img class="mini" src="images\gallery\1.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\2.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\3.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\4.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\5.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\6.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\7.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\8.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\9.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img class="mini" src="images\gallery\10.jpg" />
+    </swiper-slide>
+  </swiper-container>
+
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="contact_h2">ODKAZY</h2>
+      <div class="contact_row1">
+        
+        <a href="https://kariera.army.cz/" title="kariera.army.cz"><img class="contact_img border-radius"  src="images/links/kariera-army.png" alt="odkaz na kariera.army.cz"></a>
+        
+        <a href="https://www.vavyskov.cz/" title="Velitelství výcviku - Vojenská akademie"><img class="contact_img" src="images/links/va-new.png" alt="odkaz Velitelství výcviku - Vojenská akademie"></a>
+
+        <a href="https://unob.cz/" title="Univerzita Obrany"><img class="contact_img" src="images/links/univerzita-obrany.svg" alt="odkaz na Univerzitu Obrany"></a>
+
+        <a href="https://www.volareza.cz/"><img class="contact_img" src="images/links/volareza.svg" alt="odkaz na vojenská lázeňská a rekreační zařízení"></a>
+
+        <a href="https://www.vozp.cz/"><img class="contact_img" src="images/links/vozp.svg" alt="odkaz na vojenskou zdravotní pojišťovnu"></a>
+
+        <a href="https://www.benefity-army.cz/"><img class="contact_img" src="images/links/benefity-pro-vojaky.png" alt="odkaz na Benefity pro vojáky"></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <article class="footer_contacts_container">
+        <div class="footer_location">
+          <i class="fa-sharp fa-solid fa-location-dot"></i>
+          <a href="https://mapy.cz/s/dubelokale" target="_blank" class="footer_contact_text">
+            <p>Vojenský útvar 2266</p>
+            <p>náměstí Štefánikovo 564/1</p>
+            <p>460 01 Liberec I-Staré Město</p>
+          </a>
+        </div>
+
+        <div class="footer_phone">
+          <i class="fa-solid fa-phone"></i>
+          <div class="footer_contact_text">
+            <p>Personální oddělení: <a class="footer_contact-us" href="tel:+420973 261011">+420 973 261 011</a></p>
+            <p>Tiskový mluvčí: <a class="footer_contact-us" href="tel:+420702008566"> +420 702 008 566</a><br><a class="footer_contact-us" href="mailto:tiskovyliberec@army.cz">tiskovyliberec@army.cz</a></p>
+          </div>
+        </div>
+        
+          <ul class="footer_socials_ul">
+            <li><a href=""><i class="fa-brands fa-facebook-f footer_icon"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram footer_icon"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-wikipedia-w footer_icon"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-youtube footer_icon"></i></a></li>
+          </ul>
+
+      </article>
+      <div id="mapa" style="width:400px; height:200px;"></div>
+	<script type="text/javascript">
+		var center = SMap.Coords.fromWGS84(15.0658183, 50.7762469 );
+		var mapa = new SMap(JAK.gel("mapa"), center, 16);
+		mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+		mapa.addDefaultControls();
+    
+    var layer = new SMap.Layer.Marker();
+    mapa.addLayer(layer);
+    layer.enable();
+
+    var card = new SMap.Card();
+    card.getHeader().innerHTML = `<a href="https://mapy.cz/s/dubelokale" target="_blank">31. Pluk radiační, chemické a biologické ochrany</a>`;
+    // card.getBody().innerHTML = "Ahoj, já jsem <em>obsah     vizitky</em>!";
+
+    var options = { 
+    title: "Dobré ráno"
+    };
+    var marker = new SMap.Marker(center, "myMarker", options);
+    marker.decorate(SMap.Marker.Feature.Card, card);
+    layer.addMarker(marker);
+	</script>
+
+    </footer>
+
+    <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
 
     <script src="main.js"></script>
+    <script src="career.js"></script>
+    <script src="https://kit.fontawesome.com/e02d150246.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js">
+      
+    </script> 
+    
 </body>
 </html>
