@@ -89,19 +89,7 @@ header {
     transition: 100ms cubic-bezier(1, 0, 0, 1);
 }
 
-
 .sticky-menu {
-    top: 0;
-    backdrop-filter: blur(3rem);
-    width: 100%;
-    right: 0;
-    margin-top: 0;
-    background-color: #0b0c03a9;
-    box-shadow: 0 1px 8px 5px #00000042;
-    transition: 100ms;
-}
-
-.sticky-menu_link {
     top: 0;
     backdrop-filter: blur(3rem);
     width: 100%;
@@ -689,7 +677,8 @@ swiper-container {
         transform: rotate(45deg) translate(-11px, -7px);
     }
 
-    .header_main_navbar_link {
+
+    .header_main_navbar {
         display: flex;
         position: fixed;
         z-index: 10;
