@@ -26,7 +26,14 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 30px;
   }
+
+section:not(.contact) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
@@ -52,6 +59,8 @@ header {
     background-attachment: local;
     background-position: left center, right center;
     position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
     /* hamburger-menu */
@@ -706,18 +715,24 @@ swiper-container {
 
 
 .footer_icon {
-    color: darkolivegreen;
+    color: var(--text);
     font-size: 2rem;
-    transition: 350ms ease-in-out;
+    transition: 200ms;
 }
 
 .footer_icon:hover {
-    color: darkorchid;
+    color: whitesmoke;
+    scale: 1.2;
 }
+
 
 /* -----media queries------ */
 
 @media (max-width: 1000px) {
+
+    html {
+        scroll-padding-top: 0;
+    }
 
     section {
         padding: 2rem 3rem;
