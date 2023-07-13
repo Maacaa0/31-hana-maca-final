@@ -109,6 +109,18 @@ header {
     transition: 100ms;
 }
 
+.sticky-menu_link {
+    top: 0;
+    backdrop-filter: blur(3rem);
+    width: 100%;
+    right: 0;
+    margin-top: 0;
+    background-color: #0b0c03a9;
+    box-shadow: 0 1px 8px 5px #00000042;
+    transition: 100ms;
+}
+
+
 .main_descp {
     margin-left: 5rem;
     display: none;
