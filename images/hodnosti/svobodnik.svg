@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5.2916679mm"
+   height="5.2916679mm"
+   viewBox="0 0 5.2916679 5.2916679"
+   version="1.1"
+   id="svg3041"
+   xml:space="preserve"
+   inkscape:export-filename="svobodnik.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview3043"
+     pagecolor="#2a2a2a"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" /><defs
+     id="defs3038" /><g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-49.793019,-29.307525)"><g
+       style="fill:none"
+       id="g3557"
+       transform="matrix(0.26458333,0,0,0.26458333,29.483929,11.435731)"
+       inkscape:export-filename="kapitan.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><g
+         style="fill:none"
+         id="g3856"
+         transform="translate(76.758768,67.546939)"
+         inkscape:export-filename="svobodnik.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><circle
+           cx="10"
+           cy="10"
+           r="10"
+           fill="#d9d9d9"
+           id="circle3852" /></g></g></g></svg>
