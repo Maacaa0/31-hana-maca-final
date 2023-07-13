@@ -92,4 +92,33 @@
       top: auto;
       bottom: 5vh;
     }
+
+   .fb, .yt {
+      animation-name: scaleUp;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    .ig:hover,
+    .fb:hover,
+    .wiki:hover,
+    .yt:hover {
+      transform: none;
+      background: #A3BA3D;
+      transition: none;
+    }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }

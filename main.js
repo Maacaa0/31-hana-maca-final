@@ -1,6 +1,13 @@
 const scrollBtn = document.getElementById("scrollBtn");
 const menuDescp = document.getElementById("menuDescp");
 
+let displayWidth = window.innerWidth;
+
+document.addEventListener("DOMContentLoaded", setMultiplier);
+
+function setMultiplier() {
+  document.documentElement.style.setProperty("--multiplier", displayWidth / 1000);
+}
 
 // scroll to display "scroll to top btn" & sticky menu 
 const scrollContainer = () => {

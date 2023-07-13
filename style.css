@@ -11,6 +11,7 @@
     --swiper-pagination-bottom: -2rem;
     --swiper-pagination-bullet-size: 12px;
     --swiper-pagination-color: var(--text);
+    --multiplier: 1;
 }
 
 ::selection {
@@ -642,7 +643,14 @@ swiper-container {
 @media (max-width: 1000px) {
 
     html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
         scroll-padding-top: 0;
+        }
+    
+    section:not(.contact) {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
     }
 
     section {
@@ -662,6 +670,8 @@ swiper-container {
         background-position: center top, center top;
         padding: 2rem 3rem;
     }
+
+
 
     .header_hamburgerBtn {
         z-index: 11;
@@ -691,7 +701,6 @@ swiper-container {
     .active .bar3 {
         transform: rotate(45deg) translate(-11px, -7px);
     }
-
 
     .header_main_navbar {
         display: flex;
@@ -743,36 +752,36 @@ swiper-container {
         display: none;
     }
    
-
-    .header_title {
-        width: 18rem;
-        margin: 0;
-        padding: 0;
-        gap: .5rem;
-        top: 0;
-    }
-
-    .header_title_logo {
-        width: 5.5rem;
-    }
-
-    h1 {
-        font-size: 1.2rem;
-        font-weight: 300;
-    }
-
     .br_hidden {
         display: block;
     }
 
+    .header_title {
+        padding: 0;
+        margin: 0;
+        top:0;
+        margin-top: 3rem;
+        width: 100%;
+        background: none;
+    }
+
+    .header_title_logo {
+        width: 30%;
+        margin-right: .5rem;
+    }
+
+    h1 {
+        font-size: calc(var(--multiplier)*3rem);
+        font-weight: 500;
+    }
+
     .header_title_sub-title {
-        font-size: .9rem;
+        font-size: calc(var(--multiplier)*1.5rem);
     }
 
     .container {
-        transform: translate(20%, 25%)scale(0.5);
         left: unset;
-        right: 0;
+        right: -20px;
     }
 
     /* **********  ********** */
@@ -848,6 +857,30 @@ swiper-container {
 
 @media (max-width: 650px) {
 
+    .header_title {
+            padding: 0;
+            margin: 0;
+            top: 0;
+            gap: 0;
+            margin-top: 3rem;
+            width: 100%;
+            background: none;
+        }
+    
+        .header_title_logo {
+            width: 8rem;
+            margin-right: .8rem;
+        }
+    
+        h1 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    
+        .header_title_sub-title {
+            font-size: .8rem;
+        }
+
     #gallery swiper-container {
         width: 100%;
         height: 33vh;
@@ -874,21 +907,7 @@ swiper-container {
         width: 75vw;
     }
 
-    .header_title {
-        width: 15rem;
-    }
 
-    .header_title_logo {
-        width: 4.2rem;
-    }
-
-    h1 {
-        font-size: 1rem;
-    }
-
-    .header_title_sub-title {
-        font-size: .8rem;
-    }
 
     section {
         padding: 1rem 1.5rem;
