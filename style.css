@@ -98,7 +98,19 @@ header {
     transition: 100ms cubic-bezier(1, 0, 0, 1);
 }
 
+
 .sticky-menu {
+    top: 0;
+    backdrop-filter: blur(3rem);
+    width: 100%;
+    right: 0;
+    margin-top: 0;
+    background-color: #0b0c03a9;
+    box-shadow: 0 1px 8px 5px #00000042;
+    transition: 100ms;
+}
+
+.sticky-menu_link {
     top: 0;
     backdrop-filter: blur(3rem);
     width: 100%;
@@ -206,7 +218,6 @@ section {
     min-height: 100dvh;
     height: auto;
     padding: 5rem;
-    /* z-index: 8; */
 }
 
 /* --------- ABOUT SECTION --------- */
@@ -244,6 +255,8 @@ h2 {
 
 /* **********  ********** */
 
+/* --------- HISTORY SECTION --------- */
+
 .history {
     background-image: url(images/shape_right.png), url(images/bg-history.png);
     background-repeat: no-repeat;
@@ -251,179 +264,89 @@ h2 {
     background-attachment: local, fixed;
     background-position: -10rem 0, center;
     position: relative;
-    /* z-index: 2; */
 }
 
 .history_title {
     text-align: right;
 }
 
-.history_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.history_selection_container {
+.history_link_container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: -4rem;
-    margin: auto 0;
-
-    width: 30rem;
+    gap: 2rem;
+    
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .history_link {
-    width: 20rem;
-    cursor: pointer;
-    transition: transform 150ms ease;
+    position: relative;
+    /* width: 25rem;
+    height: 15rem; */
+
+    width: 40%;
+    height: 17vw;
+
+    border: 3px solid black;
+    background: rgba(255, 0, 0, 0.212);
+    background-size: 100%;
+    background-position-y: -15px;
     filter: grayscale(1);
+
+    transition: 150ms ease;
+}
+
+.history_link:hover {
+    filter: grayscale(0);
+    background-position-x: -25px;
+    background-size: 110%;
 }
 
 .history_link:hover::before {
-    content: url(images/icon_right.png);
-    width: 0;
-    height: 0;
-    display: block;
-    position: relative;
-    top: 8.6rem;
-    right: -15rem;
-    filter: invert(1);
-    transition: 250ms ease;
-}
-
-.history_chemical::after,
-.history_liberec::after,
-.history_barracs::after {
-    position: absolute;
-    bottom: 7.8rem;
-    left: 19rem;
-    display: block;
-    width: 6rem;
-    font-size: 1.2rem;
-    color: var(--text)
+    color: #A3BA3D;
 } 
 
- .history_chemical::after {
-    content: "historie chemického vojska";
+#barracs_link {
+    background-image: url(images/kas610.jpg);
 }
 
-.history_liberec::after {
-    content: "historie vojsk v Liberci";
+#barracs_link::before {
+    content: "KASÁRNA 6. ŘÍJNA";
 }
 
-.history_barracs::after {
-    content: "historie kasáren";
+#chemical_link {
+    background-image: url(images/mist.jpg);
 }
 
-
-.history_link:hover {
-    transform: scale(1.04);
-    filter: grayscale(0);
-    z-index: 2;
+#chemical_link::before {
+    content: "CHEMICKÉ VOJSKO";
 }
 
-.history_liberec {
-    align-self: flex-end;
-    /* z-index: 2; */
+#lbc_link {
+    background-image: url(images/lbc_link.jpg);
 }
 
-.history_liberec, .history_barracs {
-    margin-top: -4rem;
+#lbc_link::before {
+    content: "VOJSKO V LIBERCI";
 }
 
-.history_content {
-    position: fixed;
-    z-index: 11;
-    overflow-y: auto;
-    inset: 0;
-    top: 15%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 90%;
-    height: 80%;
-    font-size: 1.6rem;
-    line-height: 2.3rem;
-    background-image: linear-gradient(0deg, rgba(15,18,14,1) 0%, rgba(52,61,42,1) 48%, rgba(15,18,14,1) 100%);
-    padding: 1.5rem 2.5rem;
-    transition: 200ms ease-in-out;
-    border-radius: 2rem 0 0 2rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-
-.display-none {
-    display: none;
-}
-
-.history_close_btn {
-    background: url(images/vector_x.png) center no-repeat;
-    border: none;
-    width: 2rem;
-    height: 1.5rem;
+.history_link::before {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
-}
-
-.history_title_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-
-    margin-top: 3rem;
-}
-
-.history_button {
-    height: 50px;
-    width: 50px;
-    background: url(images/icon_right.svg) transparent center no-repeat;
-    background-size: 38%;
-    border: none;
-    cursor: pointer;
-}
-
-.history_button:hover {
-    background-size: 45%;
-    transition: 200ms ease;
-}
-
-#historyPrevBtn {
-    transform: rotate(180deg);
-}
-
-.history_content_title {
-    font-size: 2.2rem;
-    color: var(--text);
+    width: 100%;
+    bottom: 0;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
+    background: #000000ab;
+    padding: .3rem 0;
 }
 
-.history_content_text {
-    line-height: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
 
-    color: #abababb0;
+.barracs_history_content {
+    background: rgba(255, 0, 0, 0.226);
 }
 
-.history_content_imgs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.history_content_img {
-    max-width: 21rem;
-    min-width: 6rem;
-}
 
 h4 {
     margin-bottom: 1rem;
@@ -781,8 +704,7 @@ swiper-container {
         transform: rotate(45deg) translate(-11px, -7px);
     }
 
-
-    .header_main_navbar {
+    .header_main_navbar_link {
         display: flex;
         position: fixed;
         z-index: 10;
@@ -897,71 +819,20 @@ swiper-container {
     .history_title {
         text-align: left;
     }
-    
-    .history_container {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 0;
-    }
 
-    .history_selection_container {
-        /* flex-direction: row; */
-        top: 4rem;
-        width: auto;
-        gap: 2.5rem;
-        padding-bottom: 5rem;
+    .history_link_container {
+        align-items: center;
+        height: 90vh;
     }
 
     .history_link {
-        display: block;
-        width: 100%;
+        max-width: 90%;
+        width: 25rem;
+        min-height: 9.5rem;
+        height: 100%;
     }
-
-
-    .history_link > picture > img {
-        width: 100%;
-        max-width: 30rem;
-        border-radius: .5rem;
-    }
-
-    .history_link:hover::before {
-        position: absolute;
-        top: 0.6rem;
-        right: calc(49% - 10px);
-
-        width: auto;
-        height: auto;
-
-        transform: rotate(-90deg);
-    }
-
-    .history_chemical::after,
-    .history_liberec::after,
-    .history_barracs::after {
-        position: relative;
-        text-transform: uppercase;
-        top: -2rem;
-        left: 0rem;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-        background: black;
-        padding: 1rem 0;
-        border-radius: 0 0 .5rem .5rem;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
-    }
-
-    .history_liberec, .history_barracs {
-        margin-top: 0;
-        align-self: unset;
-    }
-
-    .history_content {
-        font-size: 1rem;
-        line-height: unset;
-    }
-
+    
+    
     section#gallery {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -987,10 +858,6 @@ swiper-container {
 }
 
 @media (max-width: 650px) {
-
-    .history_content_text {
-        grid-template-columns: 1fr;
-    }
 
     #gallery swiper-container {
         width: 100%;
@@ -1046,14 +913,6 @@ swiper-container {
     .about_text {
         font-size: 1rem;
         line-height: 1.8rem;
-    }
-
-    .history_content_title {
-        font-size: 1.8rem;
-    }
-
-    .history_button {
-        background-size: 30%;
     }
 
     .career_text {

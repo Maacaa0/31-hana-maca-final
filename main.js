@@ -186,25 +186,3 @@ menu.addEventListener('touchend', e => {
     }
 }
 
-const historyLink = document.querySelectorAll(".history_link");
-const historyPrevBtn = document.getElementById("historyPrevBtn");
-const historyNextBtn = document.getElementById("historyNextBtn");
-const historyCloseBtn = document.getElementById("historyCloseBtn");
-let historyContent = document.getElementById("history_content");
-let historyTextContent = document.getElementById("historyText");
-let historyImgs = document.querySelectorAll(".history_content_img");
-let historyImgsArray = Array.from(historyImgs);
-
-  historyLink.forEach(link => {
-    link.addEventListener("click", function() {
-      historyText.innerHTML = historyData[link.id].content;
-      historyTitle.textContent = historyData[link.id].title;
-      historyImgsArray.map((img, index) => img.src = `images/${historyData[link.id].imgs[index]}`)
-      historyContent.classList.remove("hidden");
-    })
-  })
-
-  historyCloseBtn.addEventListener("click", () => {
-      historyContent.classList.add("hidden");
-  })
-
