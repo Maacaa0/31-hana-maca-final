@@ -24,7 +24,7 @@
     padding: 0;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scroll-padding-top: 30px;
@@ -33,7 +33,7 @@ html {
 section:not(.contact) {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-}
+} */
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
