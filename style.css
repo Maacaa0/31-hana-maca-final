@@ -25,17 +25,6 @@
     padding: 0;
 }
 
-/* html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 30px;
-  }
-
-section:not(.contact) {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-} */
-
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: var(--navBg);
@@ -51,17 +40,18 @@ a {
 
 header {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100lvh;
     height: auto;
     background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
     background-size: auto, cover;
-    /* background-position-y: auto, -10rem; */
     background-repeat: no-repeat;
     background-attachment: local;
     background-position: left center, right center;
     position: relative;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+
+
+    /* scroll-snap-align: start;
+    scroll-snap-stop: always; */
 }
 
     /* hamburger-menu */
@@ -200,7 +190,6 @@ header {
 }
 
 h1 {
-    /* padding-top: 2rem; */
     font-size: 3rem;
     color: var(--title);
 }
@@ -216,7 +205,7 @@ h1 {
 
 section {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100lvh;
     height: auto;
     padding: 5rem;
 }
@@ -276,8 +265,7 @@ h2 {
     flex-direction: column;
     gap: 2rem;
     
-    /* justify-content: center;
-    align-items: center; */
+    margin: 2rem auto;
 }
 
 .history_link {
@@ -292,6 +280,7 @@ h2 {
     background: rgba(255, 0, 0, 0.212);
     background-size: 100%;
     background-position-y: -15px;
+    background-repeat: no-repeat;
     filter: grayscale(1);
 
     transition: 150ms ease;
@@ -655,12 +644,11 @@ swiper-container {
 @media (max-width: 1000px) {
 
     html {
-        scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scroll-padding-top: 0;
         }
     
-    section:not(.contact) {
+    section, header {
         scroll-snap-align: start;
         scroll-snap-stop: normal;
     }
@@ -718,7 +706,7 @@ swiper-container {
         display: flex;
         position: fixed;
         z-index: 10;
-        height: 100dvh;
+        height: 100lvh;
         top: 0;
         right: -50vw;
         width: 50vw;
@@ -832,14 +820,13 @@ swiper-container {
 
     .history_link_container {
         align-items: center;
-        height: 90vh;
     }
 
     .history_link {
         max-width: 90%;
         width: 25rem;
-        min-height: 9.5rem;
-        height: 100%;
+        min-height: 7rem;
+        height: 12rem;
     }
     
     
