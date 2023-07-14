@@ -19,6 +19,10 @@
     color: var(--navBg);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0; 
@@ -465,6 +469,12 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    min-height: 50lvh;
+}
+
+#swiperContainer2 {
+    max-height: 6rem;
 }
 
 swiper-container {
@@ -502,6 +512,7 @@ swiper-container {
 
   swiper-slide img.mini {
     object-fit: cover;
+    height: 6rem;
   }
 
   .mySwiper {
@@ -509,7 +520,7 @@ swiper-container {
   }
 
   .mySwiper2 {
-    height: 15vh;
+    height: 6rem;
     box-sizing: border-box;
     padding: 10px 0;
   }
@@ -643,7 +654,7 @@ swiper-container {
 
 @media (max-width: 1000px) {
 
-    html {
+    /* html {
         scroll-snap-type: y mandatory;
         scroll-padding-top: 0;
         }
@@ -651,7 +662,7 @@ swiper-container {
     section, header {
         scroll-snap-align: start;
         scroll-snap-stop: normal;
-    }
+    } */
 
     section {
         padding: 2rem 3rem;

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
+    <link rel="stylesheet" href="lightbox.min.css">
+
     <!-- <script src="https://api.mapy.cz/loader.js"></script>
 	  <script>Loader.load()</script> -->
   
@@ -110,80 +112,34 @@
       
         </swiper-container>
   
-      </section>
+    </section>
   
 
     <section id="gallery" class="gallery">
 
-        <swiper-container style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
+        <swiper-container id="swiperContainer1" style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
     thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-    <swiper-slide>
-      <img src="./images/gallery/1.jpg"/>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/2.jpg"/>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/3.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/4.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/5.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/6.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/7.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/8.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/9.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./images/gallery/10.jpg" />
-    </swiper-slide>
-  </swiper-container>
 
-  <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+      <!-- rendering images from javascript dynamically -->
+      
+      <!-- adding new image to gallery: 
+            add into images/gallery folder
+              add file name into galleryImgs array in gallery.js file -->
+
+    </swiper-container>
+
+  <swiper-container id="swiperContainer2" class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
     watch-slides-progress="true">
-    <swiper-slide>
-      <img class="mini" src="images\gallery\1.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\2.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\3.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\4.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\5.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\6.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\7.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\8.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\9.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="mini" src="images\gallery\10.jpg" />
-    </swiper-slide>
+
+    <!-- rendering images from javascript dynamically -->
+
+    <!-- adding new image to gallery: 
+            add into images/gallery folder
+              add file name into galleryImgs array in gallery.js file -->
+    
   </swiper-container>
 
-    </section>
+  </section>
 
     <footer class="footer">
       <article class="footer_contacts_container">
@@ -261,10 +217,10 @@
 
     <script src="main.js"></script>
     <script src="career.js"></script>
+    <script src="gallery.js"></script>
     <script src="https://kit.fontawesome.com/e02d150246.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js">
-      
-    </script> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <script src="lightbox-plus-jquery.js"></script>  
 </body>
 </html>
