@@ -21,6 +21,9 @@
 
 html {
     scroll-behavior: smooth;
+    /* scroll behavior */
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 30px;
 }
 
 * {
@@ -53,9 +56,8 @@ header {
     background-position: left center, right center;
     position: relative;
 
-
-    /* scroll-snap-align: start;
-    scroll-snap-stop: always; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
     /* hamburger-menu */
@@ -114,7 +116,6 @@ header {
     box-shadow: 0 1px 8px 5px #00000042;
     transition: 100ms;
 }
-
 
 .main_descp {
     margin-left: 5rem;
@@ -212,6 +213,14 @@ section {
     min-height: 100lvh;
     height: auto;
     padding: 5rem;
+    /* scroll behavior: ; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+footer {
+    scroll-snap-align: end;
+    scroll-snap-stop: normal;
 }
 
 /* --------- ABOUT SECTION --------- */
@@ -265,7 +274,7 @@ h2 {
 
 .text-animation:hover {
     cursor: pointer;
-    transition: 700ms linear;
+    transition: 200ms linear;
     background-position: -100% center;
 }
 
@@ -289,14 +298,18 @@ h2 {
 
 .history_title {
     text-align: right;
+    margin-right: 9rem;
 }
 
 .history_link_container {
+    width: 50vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
-    
-    margin: 2rem auto;
+    margin: -7rem 1rem;
 }
 
 .history_link {
@@ -304,7 +317,7 @@ h2 {
     /* width: 25rem;
     height: 15rem; */
 
-    width: 40%;
+    width: 25vw;
     height: 17vw;
 
     border: 3px solid black;
@@ -592,6 +605,12 @@ swiper-container {
 
 .contact_img {
     max-width: 80%;
+    transition: 200ms;
+}
+
+.contact_img:hover {
+    scale: 1.1;
+    transition: 200ms;
 }
 
 .border-radius {
@@ -604,7 +623,6 @@ swiper-container {
     align-items: center;
     gap: 4rem;
     position: relative;
-
     background-image: url(images/footer-bg.svg);
     background-color: #1a1e12;
     background-position: center;
@@ -626,6 +644,12 @@ swiper-container {
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: 200ms;
+}
+
+.footer_location:hover {
+    scale: 1.1;
+    transition: 200ms;
 }
 
 .fa-location-dot {
@@ -644,9 +668,6 @@ swiper-container {
     line-height: 1.7rem;
 }
 
-.footer_contact-us {
-    color: var(--subTitle);
-}
 
 .footer_socials {
     width: 100%;
@@ -667,8 +688,6 @@ swiper-container {
     gap: 1.5rem;
 }
 
-
-
 .footer_icon {
     color: var(--text);
     font-size: 2rem;
@@ -676,7 +695,7 @@ swiper-container {
 }
 
 .footer_icon:hover {
-    color: whitesmoke;
+    color: #f4f192;
     scale: 1.2;
 }
 
@@ -862,7 +881,9 @@ swiper-container {
     }
 
     .history_link_container {
-        align-items: center;
+        align-items: flex-start;
+        margin-top: 1rem;
+        width: 80vw;
     }
 
     .history_link {

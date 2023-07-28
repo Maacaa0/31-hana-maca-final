@@ -45,7 +45,7 @@ const menu_li_list = document.querySelectorAll(".menu_li");
 const SCROLL_BREAK_1 = 1.7;
 const SCROLL_BREAK_2 = 3.3;
 const SCROLL_BREAK_3 = 4.0;
-const SCROLL_BREAK_4 = 5.2;
+const SCROLL_BREAK_4 = 6.2;
 
 menu_li_list.forEach((li) => {
   li.addEventListener("click", () => {
