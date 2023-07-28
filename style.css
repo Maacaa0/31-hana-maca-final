@@ -21,8 +21,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll behavior */
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-padding-top: 30px;
 }
 
@@ -213,14 +212,16 @@ section {
     min-height: 100lvh;
     height: auto;
     padding: 5rem;
-    /* scroll behavior: ; */
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
-footer {
-    scroll-snap-align: end;
+#career, #footer, #gallery {
+    scroll-snap-align: start;
     scroll-snap-stop: normal;
+}
+
+#about, #history, #career {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* --------- ABOUT SECTION --------- */
@@ -588,7 +589,6 @@ swiper-container {
 
 .contact {
     min-height: 30vh;
-    padding: 3rem;
     /* background-color: #3F483E; */
     background: #444e23;
 }
@@ -600,6 +600,7 @@ swiper-container {
     justify-items: center;
     grid-template-columns: auto auto auto;
     gap: 2rem;
+    padding: 3rem;
 }
 
 
@@ -678,9 +679,9 @@ swiper-container {
     position: relative;
     bottom: 0;
     list-style: none;
-    background: #878b6e54;
+    background: #1a1e11;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     left: 0;
     display: flex;
     justify-content: center;

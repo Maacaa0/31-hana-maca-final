@@ -37,7 +37,7 @@
                 <li id="history_li" class="menu_li"><a href="#history">HISTORIE</a></li>
                 <li id="career_li" class="menu_li"><a href="#career">KARIÉRA</a></li>
                 <li id="gallery_li" class="menu_li"><a href="#gallery">GALERIE</a></li>
-                <li id="contact_li" class="menu_li"><a href="#contact">KONTAKT</a></li>
+                <li id="contact_li" class="menu_li"><a href="#footer">KONTAKT</a></li>
             </ul>
         </nav>
         <!-- -------------- -->
@@ -146,26 +146,29 @@
 
   </section>
 
-    <footer class="footer">
-      <article class="footer_contacts_container">
-        <a class="footer_location footer_contact_text" href="https://mapy.cz/s/dubelokale" target="_blank">
-          <i class="fa-sharp fa-solid fa-location-dot"></i>
-          <div>
-            <p>Vojenský útvar 2266</p>
-            <p>náměstí Štefánikovo 564/1</p>
-            <p>460 01 Liberec I-Staré Město</p>
-          </div>
-        </a>
+  <footer id="footer">
+    <div class="footer">
+      <div class="footer_contacts_container">
+            <a class="footer_location footer_contact_text" href="https://mapy.cz/s/dubelokale" target="_blank">
+              <i class="fa-sharp fa-solid fa-location-dot"></i>
+              <div>
+                <p>Vojenský útvar 2266</p>
+                <p>náměstí Štefánikovo 564/1</p>
+                <p>460 01 Liberec I-Staré Město</p>
+              </div>
+            </a>
 
-        <div class="footer_phone">
-          <i class="fa-solid fa-phone"></i>
-          <div class="footer_contact_text">
-            <p>Personální oddělení: <a class="footer_contact-us text-animation" href="tel:+420973 261011">+420 973 261 011</a></p>
-            <p>Tiskový mluvčí: <a class="footer_contact-us text-animation" href="tel:+420702008566"> +420 702 008 566</a><br><a class="footer_contact-us text-animation" href="mailto:tiskovyliberec@army.cz">tiskovyliberec@army.cz</a></p>
-          </div>
-        </div>
+            <div class="footer_phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="footer_contact_text">
+                <p>Personální oddělení: <a class="footer_contact-us text-animation" href="tel:+420973 261011">+420 973 261 011</a></p>
+                <p>Tiskový mluvčí: <a class="footer_contact-us text-animation" href="tel:+420702008566"> +420 702 008 566</a><br><a class="footer_contact-us text-animation" href="mailto:tiskovyliberec@army.cz">tiskovyliberec@army.cz</a></p>
+              </div>
+            </div>
+    </div>
+    
+    </div>
 
-      </article>
       <!-- <div id="mapa" style="width:400px; height:200px;"></div>
 	<script type="text/javascript">
 		var center = SMap.Coords.fromWGS84(15.0658183, 50.7762469 );
@@ -189,9 +192,7 @@
     layer.addMarker(marker);
 	</script> -->
 
-    </footer>
-
-    <footer id="contact" class="contact">
+    <div class="contact">
       <div class="contact_row1">
         
         <a href="https://kariera.army.cz/" title="kariera.army.cz"><img class="contact_img border-radius"  src="images/links/kariera-army.png" alt="odkaz na kariera.army.cz"></a>
@@ -206,18 +207,16 @@
 
         <a href="https://www.benefity-army.cz/"><img class="contact_img" src="images/links/benefity-pro-vojaky.png" alt="odkaz na Benefity pro vojáky"></a>
       </div>
-    </footer>
+      <ul class="footer_socials_ul">
+        <li><a href="https://www.facebook.com/31prchbo"><i class="fa-brands fa-facebook-f footer_icon"></i></a></li>
+        <li><a href="https://www.instagram.com/31.pluk_liberec/"><i class="fa-brands fa-instagram footer_icon"></i></a></li>
+        <li><a href="https://cs.wikipedia.org/wiki/31._pluk_radiační,_chemické,_biologické_ochrany"><i class="fa-brands fa-wikipedia-w footer_icon"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=pjPagpx51XI"><i class="fa-brands fa-youtube footer_icon"></i></a></li>
+      </ul>
 
-    <ul class="footer_socials_ul">
-      <li><a href="https://www.facebook.com/31prchbo"><i class="fa-brands fa-facebook-f footer_icon"></i></a></li>
-      <li><a href="https://www.instagram.com/31.pluk_liberec/"><i class="fa-brands fa-instagram footer_icon"></i></a></li>
-      <li><a href="https://cs.wikipedia.org/wiki/31._pluk_radiační,_chemické,_biologické_ochrany"><i class="fa-brands fa-wikipedia-w footer_icon"></i></a></li>
-      <li><a href="https://www.youtube.com/watch?v=pjPagpx51XI"><i class="fa-brands fa-youtube footer_icon"></i></a></li>
-    </ul>
-
-    
-
-    <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
+      <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
+    </div>
+  </footer>
 
     <script src="main.js"></script>
     <script src="career.js"></script>

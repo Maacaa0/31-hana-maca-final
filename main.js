@@ -43,8 +43,8 @@ const gallery_li = document.getElementById("gallery_li");
 const menu_li_list = document.querySelectorAll(".menu_li");
 
 const SCROLL_BREAK_1 = 1.7;
-const SCROLL_BREAK_2 = 3.3;
-const SCROLL_BREAK_3 = 4.0;
+const SCROLL_BREAK_2 = 2.3;
+const SCROLL_BREAK_3 = 3.8;
 const SCROLL_BREAK_4 = 6.2;
 
 menu_li_list.forEach((li) => {
