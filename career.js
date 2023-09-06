@@ -1,3 +1,11 @@
+// load website
+fetch("https://kariera.army.cz/volna-mista")
+  .then(response => response.text())
+  .then(data => {
+    console.log(data);
+  });
+
+
 const data = {
   "positions": [
     {
@@ -101,48 +109,6 @@ window.addEventListener("load", () => {
     });
 });
 
-
-// fetch('https://kariera.army.cz/volna-mista')
-//   .then(response => response.text())
-//   .then(html => {
-//     let strippedHtml = html.split('<div class="item-list">')[1];
-//     strippedHtml = strippedHtml.split('</section>')[0].trim();
-
-//     let i = 0;
-//     while (i < 10) {
-//       strippedHtml = strippedHtml.trim();
-//       strippedHtml = strippedHtml.replace('</div>', '').trim();
-//       i++;
-//     }
-
-//     strippedHtml = strippedHtml.replace('<ul>', '').replace('</ul', '').trim();
-//     strippedHtml = strippedHtml.replace(/src="\/sites\/kariera/g, 'src="https://kariera.army.cz/sites/kariera');
-
-//     const boxes = strippedHtml.split('<li class="views-row');
-//     const filteredBoxes = [];
-
-//     for (const box of boxes) {
-//       const trimmedBox = box.trim();
-//       if (trimmedBox !== '') {
-//         const boxWithClass = '<li class="views-row' + trimmedBox;
-//         if (trimmedBox.includes('<li>123</li>')) {
-//           filteredBoxes.push(boxWithClass);
-//         }
-//       }
-//     }
-
-//     const ulElement = document.createElement('ul');
-//     for (const box of filteredBoxes) {
-//       const liElement = document.createElement('li');
-//       liElement.innerHTML = box;
-//       ulElement.appendChild(liElement);
-//     }
-
-//     document.body.appendChild(ulElement);
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
 
 
 
