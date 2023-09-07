@@ -10,9 +10,8 @@
     <link rel="icon" type="image/x-icon" href="images/web-ico.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-
     <link rel="stylesheet" href="lightbox.min.css">
-
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <script src="https://api.mapy.cz/loader.js"></script>
 	  <script>Loader.load()</script>
   
@@ -38,7 +37,7 @@
                 <li id="history_li" class="menu_li"><a href="#history">HISTORIE</a></li>
                 <li id="career_li" class="menu_li"><a href="#career">KARIÉRA</a></li>
                 <li id="gallery_li" class="menu_li"><a href="#gallery">GALERIE</a></li>
-                <li id="contact_li" class="menu_li"><a href="#contact">KONTAKT</a></li>
+                <li id="contact_li" class="menu_li"><a href="#footer">KONTAKT</a></li>
             </ul>
         </nav>
         <!-- -------------- -->
@@ -67,10 +66,13 @@
 
             <p class="about_text">
                 31. pluk radiační, chemické a biologické ochrany je specializovaný útvar Armády České republiky s dlouhou historií a tradicí v chemickém vojsku. Pluk se zaměřuje na plnění nejnáročnějších úkolů v oblasti chemického zabezpečení a ochrany proti zbraním hromadného ničení a radioaktivním a toxickým látkám.
+                <br>
             </p>
-            <br>
             <p class="about_text">
                 Jeho specializované služby zahrnují radiační a chemický průzkum, laboratorní analýzu, varování, dekontaminaci a zdravotnické ošetření. Pluk také vyčleňuje síly a prostředky pro operace v zahraničí a spolupracuje s orgány státní správy a místní samosprávy při organizaci vzdělávacích a školících aktivit ve prospěch civilní veřejnosti.
+            </p>
+            <p class="about_text">
+              Pluk nese jméno po statečném generálu <a href="https://www.vhu.cz/generalmajor-starkoc-dalsi-z-pribehu-komunisticke-zvule/" class="text-animation">Stanislavu Starkočovi</a>, jenž vedl s neohrožeností a oddaností mnoho klíčových misí pro ochranu země. Jeho odkaz žije dál v srdcích vojáků i civilistů.
             </p>
         </article>
         
@@ -84,11 +86,11 @@
     <section id="history" class="history">
         <h2 class="history_title">HISTORIE</h2>
         <div class="history_link_container">
-          <a href="#" id="barracs_link" class="history_link"></a>
+          <a href="#" id="barracs_link" class="history_link barracs"></a>
 
-          <a href="#" id="chemical_link" class="history_link"></a>
+          <a href="#" id="chemical_link" class="history_link chemical"></a>
 
-          <a href="#" id="lbc_link"class="history_link"></a>
+          <a href="#" id="lbc_link"class="history_link lbc"></a>
         </div>
         
     </section>
@@ -98,18 +100,15 @@
         <div class="career_text career_div1">
           <p>Jak se stát jedním z nás?</p>
           <ul class="career_list">
-            <li>vyplň formulář na <a class="career_link" href="https://kariera.army.cz/">kariera.army.cz</a></li>
-            <li>zavolej na infolinku <a class="career_link" href="tel:+420800154445">800 154 445</a></li>
-            <li>doraž na <a class="career_link" href="https://goo.gl/maps/dLvFHKK1We4GkBL99">rekrutační středisko</a></li>
+            <li>vyplň formulář na <a class="career_link text-animation" href="https://kariera.army.cz/">kariera.army.cz</a></li>
+            <li>zavolej na infolinku <a class="career_link text-animation" href="tel:+420800154445">800 154 445</a></li>
+            <li>doraž na <a class="career_link text-animation" href="https://goo.gl/maps/dLvFHKK1We4GkBL99">rekrutační středisko</a></li>
           </ul>
         </div>
   
         <p class="career_text">Volná místa u 31. pluku</p>
          
         <swiper-container id="swiperCareer" class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" slides-per-view="3">
-  
-          
-      
         </swiper-container>
   
     </section>
@@ -117,48 +116,58 @@
 
     <section id="gallery" class="gallery">
 
-        <swiper-container id="swiperContainer1" style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
+    <!-- SnapWidget -->
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <iframe src="https://snapwidget.com/embed/1038958" class="snapwidget-widget" allowtransparency="true" frameborder="0"
+      scrolling="no" style="border:none; overflow:hidden;">
+    </iframe>
+
+        <!-- <swiper-container id="swiperContainer1" style="--swiper-navigation-color: #A3BA3D; --swiper-pagination-color: #fff" class="mySwiper"
     thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
 
-      <!-- rendering images from javascript dynamically -->
+      rendering images from javascript dynamically
       
-      <!-- adding new image to gallery: 
+      adding new image to gallery: 
             add into images/gallery folder
-              add file name into galleryImgs array in gallery.js file -->
+              add file name into galleryImgs array in gallery.js file
 
     </swiper-container>
 
   <swiper-container id="swiperContainer2" class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
     watch-slides-progress="true">
 
-    <!-- rendering images from javascript dynamically -->
+    rendering images from javascript dynamically
 
-    <!-- adding new image to gallery: 
+    adding new image to gallery: 
             add into images/gallery folder
-              add file name into galleryImgs array in gallery.js file -->
+              add file name into galleryImgs array in gallery.js file
     
-  </swiper-container>
+  </swiper-container> -->
 
   </section>
 
-    <footer class="footer">
-      <article class="footer_contacts_container">
-        <div class="footer_location">
-          <i class="fa-sharp fa-solid fa-location-dot"></i>
-          <a href="https://mapy.cz/s/dubelokale" target="_blank" class="footer_contact_text">
-            <p>Vojenský útvar 2266</p>
-            <p>náměstí Štefánikovo 564/1</p>
-            <p>460 01 Liberec I-Staré Město</p>
-          </a>
-        </div>
+  <footer id="footer">
+    <div class="footer">
+      <div class="footer_contacts_container">
+            <a class="footer_location footer_contact_text" href="https://mapy.cz/s/dubelokale" target="_blank">
+              <i class="fa-sharp fa-solid fa-location-dot"></i>
+              <div>
+                <p>Vojenský útvar 2266</p>
+                <p>náměstí Štefánikovo 564/1</p>
+                <p>460 01 Liberec I-Staré Město</p>
+              </div>
+            </a>
 
-        <div class="footer_phone">
-          <i class="fa-solid fa-phone"></i>
-          <div class="footer_contact_text">
-            <p>Personální oddělení: <a class="footer_contact-us" href="tel:+420973 261011">+420 973 261 011</a></p>
-            <p>Tiskový mluvčí: <a class="footer_contact-us" href="tel:+420702008566"> +420 702 008 566</a><br><a class="footer_contact-us" href="mailto:tiskovyliberec@army.cz">tiskovyliberec@army.cz</a></p>
-          </div>
-        </div>
+            <div class="footer_phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="footer_contact_text">
+                <p>Personální oddělení: <a class="footer_contact-us text-animation" href="tel:+420973 261011">+420 973 261 011</a></p>
+                <p>Tiskový mluvčí: <a class="footer_contact-us text-animation" href="tel:+420702008566"> +420 702 008 566</a><br><a class="footer_contact-us text-animation" href="mailto:tiskovyliberec@army.cz">tiskovyliberec@army.cz</a></p>
+              </div>
+            </div>
+    </div>
+    
+    </div>
 
       </article>
       <div id="mapa" style="width:400px; height:300px;"></div>
@@ -184,10 +193,7 @@
     layer.addMarker(marker);
 	</script>
 
-    </footer>
-    
-
-    <section id="contact" class="contact">
+    <div class="contact">
       <div class="contact_row1">
         
         <a href="https://kariera.army.cz/" title="kariera.army.cz"><img class="contact_img border-radius"  src="images/links/kariera-army.png" alt="odkaz na kariera.army.cz"></a>
@@ -202,18 +208,16 @@
 
         <a href="https://www.benefity-army.cz/"><img class="contact_img" src="images/links/benefity-pro-vojaky.png" alt="odkaz na Benefity pro vojáky"></a>
       </div>
-    </section>
+      <ul class="footer_socials_ul">
+        <li><a href="https://www.facebook.com/31prchbo"><i class="fa-brands fa-facebook-f footer_icon"></i></a></li>
+        <li><a href="https://www.instagram.com/31.pluk_liberec/"><i class="fa-brands fa-instagram footer_icon"></i></a></li>
+        <li><a href="https://cs.wikipedia.org/wiki/31._pluk_radiační,_chemické,_biologické_ochrany"><i class="fa-brands fa-wikipedia-w footer_icon"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=pjPagpx51XI"><i class="fa-brands fa-youtube footer_icon"></i></a></li>
+      </ul>
 
-    <ul class="footer_socials_ul">
-      <li><a href="https://www.facebook.com/31prchbo"><i class="fa-brands fa-facebook-f footer_icon"></i></a></li>
-      <li><a href="https://www.instagram.com/31.pluk_liberec/"><i class="fa-brands fa-instagram footer_icon"></i></a></li>
-      <li><a href="https://cs.wikipedia.org/wiki/31._pluk_radiační,_chemické,_biologické_ochrany"><i class="fa-brands fa-wikipedia-w footer_icon"></i></a></li>
-      <li><a href="https://www.youtube.com/watch?v=pjPagpx51XI"><i class="fa-brands fa-youtube footer_icon"></i></a></li>
-    </ul>
-
-    
-
-    <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
+      <a href="#header" id="scrollBtn" class="back-to-top hidden"></a>
+    </div>
+  </footer>
 
     <script src="main.js"></script>
     <script src="career.js"></script>
