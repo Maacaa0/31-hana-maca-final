@@ -13,8 +13,8 @@
 
     <link rel="stylesheet" href="lightbox.min.css">
 
-    <!-- <script src="https://api.mapy.cz/loader.js"></script>
-	  <script>Loader.load()</script> -->
+    <script src="https://api.mapy.cz/loader.js"></script>
+	  <script>Loader.load()</script>
   
 </head>
 <body>
@@ -161,7 +161,7 @@
         </div>
 
       </article>
-      <!-- <div id="mapa" style="width:400px; height:200px;"></div>
+      <div id="mapa" style="width:400px; height:300px;"></div>
 	<script type="text/javascript">
 		var center = SMap.Coords.fromWGS84(15.0658183, 50.7762469 );
 		var mapa = new SMap(JAK.gel("mapa"), center, 16);
@@ -173,8 +173,8 @@
     layer.enable();
 
     var card = new SMap.Card();
-    card.getHeader().innerHTML = `<a href="https://mapy.cz/s/dubelokale" target="_blank">31. Pluk radiační, chemické a biologické ochrany</a>`;
-    // card.getBody().innerHTML = "Ahoj, já jsem <em>obsah     vizitky</em>!";
+    card.getHeader().innerHTML = `<a class="map_link" href="https://mapy.cz/s/dubelokale" target="_blank">31. Pluk radiační, chemické a biologické ochrany</a>`;
+    card.getBody().innerHTML = "Pluk je jediný specializovaný útvar Armády České republiky, který je určen k plnění úkolů chemického zabezpečení AČR a nejsložitějších úkolů ochrany proti zbraním hromadného ničení i proti ostatním radioaktivním a toxickým látkám.";
 
     var options = { 
     title: "Dobré ráno"
@@ -182,7 +182,7 @@
     var marker = new SMap.Marker(center, "myMarker", options);
     marker.decorate(SMap.Marker.Feature.Card, card);
     layer.addMarker(marker);
-	</script> -->
+	</script>
 
     </footer>
     

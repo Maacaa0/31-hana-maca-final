@@ -636,7 +636,10 @@ swiper-container {
     gap: 1.5rem;
 }
 
-
+.card-header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 
 .footer_icon {
     color: var(--text);
