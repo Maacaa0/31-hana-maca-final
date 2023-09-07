@@ -7,7 +7,9 @@
    _hotovo, je to tady:_
    https://github.com/Hanka8/31-prchbo-node
 
-3. Co se skriptem na volná místa?
+3. ~~Co se skriptem na volná místa?~~
+
+   _funguje_
 
 
 ## musíme dodělat:
