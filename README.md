@@ -16,10 +16,18 @@
 ## musíme dodělat:
 
 1. responzivita [zajímavá aplikace](https://responsively.app/download)
+   - _teď mi to přijde docela responzivní, vidíš tam něco?_
 
-2. mapa
+2. mapa_
+   - _děláš ty_
 
 3. odkaz na kariera.army.cz
+
+4. vyplnit stránky v historii
+
+## brainstorming
+
+1. až to bude responzivní a funkční, co to celý přepsat do SASS/SCSS? - přesně na takový stránky by se měly hodit CSS preprocessory...
 
 
 
