@@ -31,21 +31,17 @@ document.addEventListener("scroll", () => {
   }
   });
 
-
-  // underline <li> on scroll
-
-const about_li = document.getElementById("about_li");
-const career_li = document.getElementById("career_li");
-const contact_li = document.getElementById("contact_li");
-const history_li = document.getElementById("history_li");
-const gallery_li = document.getElementById("gallery_li");
+// underlining menu items on scroll
 
 const menu_li_list = document.querySelectorAll(".menu_li");
 
-const SCROLL_BREAK_1 = 1.7;
-const SCROLL_BREAK_2 = 3.3;
-const SCROLL_BREAK_3 = 4.0;
-const SCROLL_BREAK_4 = 5.2;
+const scrollPositions = {
+  about: document.querySelector("#about").offsetTop,
+  history: document.querySelector("#history").offsetTop,
+  career: document.querySelector("#career").offsetTop,
+  gallery: document.querySelector("#gallery").offsetTop,
+  contact: document.querySelector("#footer").offsetTop,
+};
 
 menu_li_list.forEach((li) => {
   li.addEventListener("click", () => {
@@ -57,66 +53,56 @@ menu_li_list.forEach((li) => {
 });
 
 function showUnderlineOnScroll() {
+  const scrollTop = scrollContainer().scrollTop;
+  const windowHeight = window.innerHeight;
+
   menu_li_list.forEach((li) => {
+    li.classList.remove("underline");
     li.classList.add("menu-transition");
   });
-if (scrollContainer().scrollTop > window.innerHeight / 1.3 && scrollContainer().scrollTop < window.innerHeight * SCROLL_BREAK_1) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
-    about_li.classList.add("underline");
-  } else if (scrollContainer().scrollTop > window.innerHeight * SCROLL_BREAK_1 && scrollContainer().scrollTop < window.innerHeight * SCROLL_BREAK_2) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
-    history_li.classList.add("underline");
-  } else if (scrollContainer().scrollTop > window.innerHeight * SCROLL_BREAK_2 && scrollContainer().scrollTop < window.innerHeight * SCROLL_BREAK_3) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
-    career_li.classList.add("underline");
-  } else if (scrollContainer().scrollTop > window.innerHeight * SCROLL_BREAK_3 && scrollContainer().scrollTop < window.innerHeight * SCROLL_BREAK_4) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
-    gallery_li.classList.add("underline");
-  } else if (scrollContainer().scrollTop > window.innerHeight * SCROLL_BREAK_4) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
-    contact_li.classList.add("underline");
-  } else if (scrollContainer().scrollTop < window.innerHeight / 2) {
-    menu_li_list.forEach((li) => {
-      li.classList.remove("underline");
-    });
+
+  if (scrollTop < scrollPositions.about - windowHeight / 2) {
+    // You're at the top of the page
+  } else if (scrollTop < scrollPositions.history - windowHeight / 2) {
+    menu_li_list[0].classList.add("underline"); // About
+  } else if (scrollTop < scrollPositions.career - windowHeight / 2) {
+    menu_li_list[1].classList.add("underline"); // History
+  } else if (scrollTop < scrollPositions.gallery - windowHeight / 2) {
+    menu_li_list[2].classList.add("underline"); // Career
+  } else if (scrollTop < scrollPositions.contact - windowHeight / 2) {
+    menu_li_list[3].classList.add("underline"); // Gallery
+  } else {
+    menu_li_list[4].classList.add("underline"); // Contact
   }
 }
+
+showUnderlineOnScroll();
 
 document.addEventListener("scroll", showUnderlineOnScroll);
 
 
-  // for showing mobile menu
-  const hamburgerBtn = document.getElementById("hamburgerBtn");
-  const menu = document.getElementById("menu");
+// for showing mobile menu
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const menu = document.getElementById("menu");
 
-  hamburgerBtn.addEventListener("click", () => {
-      hamburgerBtn.classList.toggle("active");
-      menu.classList.toggle("shown");
-  });
+hamburgerBtn.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    menu.classList.toggle("shown");
+});
 
-  // close menu onclick outside
-  document.addEventListener('click', event => {
-    const isClickInside = menu.contains(event.target);
-    const btnClick = hamburgerBtn.contains(event.target);
-    if (btnClick && hamburgerBtn.classList.contains("active")) {
-        hamburgerBtn.classList.add("active");
-        menu.classList.add("shown");
+// close menu onclick outside
+document.addEventListener('click', event => {
+  const isClickInside = menu.contains(event.target);
+  const btnClick = hamburgerBtn.contains(event.target);
+  if (btnClick && hamburgerBtn.classList.contains("active")) {
+      hamburgerBtn.classList.add("active");
+      menu.classList.add("shown");
 
-    } else if (!isClickInside || event.target === hamburgerBtn) {
-      hamburgerBtn.classList.remove("active");
-      menu.classList.remove("shown");
-    }
-  });
+  } else if (!isClickInside || event.target === hamburgerBtn) {
+    hamburgerBtn.classList.remove("active");
+    menu.classList.remove("shown");
+  }
+});
 
 // swipe to close menu 
 let touchStart, touchEnd;

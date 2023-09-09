@@ -21,8 +21,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-    scroll-padding-top: 30px;
 }
 
 * {
@@ -228,12 +226,11 @@ section {
 
 .about {
     position: relative;
-    background-image: url(images/shape-about.png), url(images/bg-about.png);
-    background-position: calc(100% - 30vw) center, center;
+    background-image: url(images/shape-about.svg), url(images/bg-about.png);
+    background-position: calc(100% - 30vw) top, center;
     background-repeat: no-repeat;
     background-size: 80vw, cover;
     background-attachment: local, fixed;
-
 }
 
 .about_container {
@@ -394,7 +391,7 @@ h4 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
 }
 
 .career_h2 {
@@ -719,8 +716,8 @@ swiper-container {
         scroll-snap-stop: normal;
     } */
 
-    section {
-        padding: 2rem 3rem;
+    section:not(.history) {
+        min-height: max-content;
     }
 
     h2 {
@@ -737,8 +734,6 @@ swiper-container {
         background-position: center top, center top;
         padding: 2rem 3rem;
     }
-
-
 
     .header_hamburgerBtn {
         z-index: 11;
@@ -864,12 +859,12 @@ swiper-container {
 
     .about_container {
         width: unset;
+        margin-bottom: 15rem;
     }
 
     .about_text {
         font-size: 1.4rem;
     }
-
 
     /* **********  ********** */
 
@@ -879,6 +874,7 @@ swiper-container {
         background-image: url(images/shape-about.png), url(images/bg-history.png);
         background-size: auto,cover;
         background-position: center top -1rem;
+        padding-bottom: 12rem;
     }
 
     .history_title {
@@ -887,6 +883,7 @@ swiper-container {
 
     .history_link_container {
         align-items: flex-start;
+        flex-wrap: nowrap;
         margin-top: 1rem;
         width: 80vw;
     }
@@ -913,13 +910,15 @@ swiper-container {
         height: 60vh;
      }
 
-     .contact_row1 {
+    .contact_row1 {
         grid-template-columns: auto auto;
     }
 
     #mapa {
         display: none;
     }
+
+    /* ------------------- */
 
 }
 
@@ -934,27 +933,31 @@ swiper-container {
             width: 100%;
             background: none;
         }
-    
-        .header_title_logo {
-            width: 8rem;
-            margin-right: .8rem;
-        }
-    
-        h1 {
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-    
-        .header_title_sub-title {
-            font-size: .8rem;
-        }
+
+    .header_title_logo {
+        width: 8rem;
+        margin-right: .8rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .header_title_sub-title {
+        font-size: .8rem;
+    }
+
+    .history_link_container {
+        align-items: center;
+    }
 
     #gallery swiper-container {
         width: 100%;
         height: 33vh;
     }
 
-        #gallery .mySwiper2 swiper-slide {
+    #gallery .mySwiper2 swiper-slide {
         height: 50%;
     }
 }
@@ -975,8 +978,6 @@ swiper-container {
         width: 75vw;
     }
 
-
-
     section {
         padding: 1rem 1.5rem;
     }
@@ -995,10 +996,6 @@ swiper-container {
         font-size: 1.1rem;
     }
 
-    .contact {
-        padding: 1rem 1.5rem;
-     }
-
     .footer_contact_text {
         font-size: .8rem;
         line-height: 1.4rem;
@@ -1010,7 +1007,6 @@ swiper-container {
      .fa-phone {
         font-size: 1.4rem;
      }
-
 }
 
     /* back-to-top BTN */

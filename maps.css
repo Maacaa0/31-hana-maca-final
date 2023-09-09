@@ -87,6 +87,13 @@
   color: #4F6100;
 }  */
 
+@media (max-width: 1000px) {
+  .wiki-yt {
+      top: auto;
+      bottom: 5vh;
+    }
+}
+
 @media (max-width: 800px) {
   .wiki-yt {
       top: auto;
