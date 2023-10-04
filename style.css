@@ -654,6 +654,10 @@ swiper-container {
     border-radius: 2rem;
 }
 
+#footer {
+    background-color: #1a1e11;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -668,7 +672,6 @@ swiper-container {
     min-height: 50vh;
     height: auto;
     padding: 3rem;
-    /* padding-bottom: 0; */
 }
 
 .footer_contacts_container {
@@ -741,6 +744,11 @@ swiper-container {
     scale: 1.2;
 }
 
+.smap {
+    right: -50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
 
 /* -----media queries------ */
 
