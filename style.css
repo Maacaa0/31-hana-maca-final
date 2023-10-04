@@ -293,6 +293,46 @@ h2 {
     position: relative;
 }
 
+.history__barracks h2 {
+    margin: 0;
+}
+
+.history__subtitle {
+    color: #A3BA3D;
+    margin-bottom: 1rem;
+}
+
+.history__text {
+    color: var(--textBasic);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.history__back {
+    display: block;
+    background-image: url(images/arrow-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    aspect-ratio: 1;
+}
+
+.history__back:hover {
+    cursor: pointer;
+    transition: 100ms;
+    transform: scale(1.2);
+}
+
+.history__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
 .history_title {
     text-align: right;
     margin-right: 9rem;
