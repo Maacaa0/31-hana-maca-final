@@ -308,6 +308,7 @@ h2 {
     line-height: 1.5rem;
     margin-bottom: 2rem;
     text-align: justify;
+    max-width: 55rem;
 }
 
 .history__back {
@@ -351,9 +352,6 @@ h2 {
 
 .history_link {
     position: relative;
-    /* width: 25rem;
-    height: 15rem; */
-
     width: 25vw;
     height: 17vw;
 
@@ -1059,11 +1057,11 @@ swiper-container {
 
     /* back-to-top BTN */
 
-.back-to-top {
+/* .back-to-top {
     display: none;
     width: 50px;
     height: 50px;
-    /* background: var(--text) url(images/icon_right.png) center no-repeat; */
+    background: var(--text) url(images/icon_right.png) center no-repeat;
     transform: rotate(-90deg);
     position: sticky;
     left: calc(100% - 80px);
@@ -1084,8 +1082,12 @@ swiper-container {
     opacity: 0;
     z-index: -10;
     pointer-events: none;
-    /* transition: 150ms ease-in; */
-}
+    transition: 150ms ease-in;
+    -webkit-transition: 150ms ease-in;
+    -moz-transition: 150ms ease-in;
+    -ms-transition: 150ms ease-in;
+    -o-transition: 150ms ease-in;
+} */
         /* -------- */
 
 
