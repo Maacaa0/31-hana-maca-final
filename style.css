@@ -46,7 +46,7 @@ header {
     width: 100%;
     min-height: 100lvh;
     height: auto;
-    background-image: url(images/bg-main-secondary.svg), url(images/bg-main.png);
+    background-image: url(images/bg-main-secondary.svg), url(images/bg-main.webp);
     background-size: auto, cover;
     background-repeat: no-repeat;
     background-attachment: local;
@@ -64,7 +64,7 @@ header {
 }
 
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3 {;
     background-image: url(images/menu_bar.svg);
     background-repeat: no-repeat;
     background-size: contain;
